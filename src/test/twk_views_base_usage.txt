@@ -1,0 +1,1333 @@
+view_unittest.cc:38:using base::ASCIIToUTF16;
+view_unittest.cc:141:  int count = base::RandInt(1, 5);
+view_unittest.cc:145:    if (base::RandDouble() > 0.5)
+view_unittest.cc:147:    if (base::RandDouble() < 0.2)
+view_unittest.cc:163:    int a = base::RandInt(0, count - 1);
+view_unittest.cc:164:    int b = base::RandInt(0, count - 1);
+view_unittest.cc:172:  if (!view->layer() && base::RandDouble() < 0.1)
+view_unittest.cc:175:  if (base::RandDouble() < 0.1)
+view_unittest.cc:1128:  const base::string16 kText = ASCIIToUTF16(
+view_unittest.cc:1130:  const base::string16 kExtraText = ASCIIToUTF16("Pretty deep, Philip!");
+view_unittest.cc:1146:  textfield->setText(base::string16());
+view_unittest.cc:1162:  const base::string16 kNormalText = ASCIIToUTF16("Normal");
+view_unittest.cc:1163:  const base::string16 kReadOnlyText = ASCIIToUTF16("Read only");
+view_unittest.cc:1164:  const base::string16 kPasswordText =
+view_unittest.cc:1195:  base::string16 result;
+view_unittest.cc:2713:    : ui::LayerAnimator(base::TimeDelta::FromMilliseconds(0)) {}
+view_unittest.cc:2742:    ViewsTestBase::tearDown();
+view_unittest.cc:2884:  base::i18n::SetICUDefaultLocale("he");
+view_unittest.cc:2934:  base::i18n::SetICUDefaultLocale(locale);
+view_unittest.cc:3284:      for (base::hash_set<intptr_t>::iterator it = cull_set.cull_set_->begin();
+view_unittest.cc:3344:  base::i18n::SetICUDefaultLocale("ar");
+view_unittest.cc:3385:  base::i18n::SetICUDefaultLocale(locale);
+view_unittest.cc:3563:  return base::StringPrintf("%.2f %0.2f", vector.x(), vector.y());
+mouse_watcher.h:61:  void set_notify_on_exit_time(base::TimeDelta time) {
+mouse_watcher.h:93:  base::TimeDelta notify_on_exit_time_;
+view_targeter_unittest.cc:233:                     base::TimeDelta(),
+view_targeter_unittest.cc:240:                     base::TimeDelta(),
+repeat_controller.cc:7:using base::TimeDelta;
+repeat_controller.cc:19:RepeatController::RepeatController(const base::Closure& callback)
+window/dialog_delegate.cc:122:base::string16 DialogDelegate::getDialogLabel() const {
+window/dialog_delegate.cc:123:  return base::string16();
+window/dialog_delegate.cc:126:base::string16 DialogDelegate::getDialogTitle() const {
+window/dialog_delegate.cc:127:  return getWidget() ? getWidget()->getWindowTitle() : base::string16();
+window/dialog_delegate.cc:148:base::string16 DialogDelegate::getDialogButtonLabel(
+window/dialog_delegate.cc:150:  std::string locale = base::getSystemLang();
+window/dialog_delegate.cc:173:  return base::string16();
+window/dialog_client_view_unittest.cc:56:    ViewsTestBase::setUp();
+window/dialog_client_view.cc:457:  const base::string16 title = getDialogDelegate()->getDialogButtonLabel(type);
+window/custom_frame_view.cc:175:  std::string locale = base::getSystemLang();
+window/custom_frame_view.cc:635:  base::string16 title = frame_ ? frame_->getWindowTitle() : base::string16();
+window/dialog_delegate.h:95:  virtual base::string16 getDialogLabel() const override;
+window/dialog_delegate.h:96:  virtual base::string16 getDialogTitle() const override;
+window/dialog_delegate.h:100:  virtual base::string16 getDialogButtonLabel(
+window/non_client_view.cc:144:// void NonClientView::setAccessibleName(const base::string16& name) {
+window/dialog_delegate_unittest.cc:41:  base::string16 getWindowTitle() const override { return title_; }
+window/dialog_delegate_unittest.cc:77:  void set_title(const base::string16& title) { title_ = title; }
+window/dialog_delegate_unittest.cc:85:  base::string16 title_;
+window/dialog_delegate_unittest.cc:96:    ViewsTestBase::setUp();
+window/dialog_delegate_unittest.cc:103:    ViewsTestBase::tearDown();
+window/dialog_delegate_unittest.cc:125:  LabelButton* button_1 = new LabelButton(dialog(), base::string16());
+window/dialog_delegate_unittest.cc:132:  Checkbox* checkbox = new Checkbox(base::string16());
+window/dialog_delegate_unittest.cc:139:  LabelButton* button_2 = new LabelButton(dialog(), base::string16());
+window/dialog_delegate_unittest.cc:213:  dialog2->set_title(base::ASCIIToUTF16("Title"));
+window/dialog_delegate_unittest.cc:223:  dialog()->set_title(base::ASCIIToUTF16("Title"));
+window/non_client_view.h:251:  void setAccessibleName(const base::string16& name);
+window/non_client_view.h:291:  base::string16 accessible_name_;
+views_delegate.h:89:  virtual void notifyMenuItemFocused(const base::string16& menu_name,
+views_delegate.h:90:                                     const base::string16& menu_item_name,
+views_delegate.h:121:  virtual base::TimeDelta getDefaultTextfieldObscuredRevealDuration();
+views_delegate.h:142:                                     const base::Closure& callback);
+view.h:547:    return flip_canvas_on_paint_for_rtl_ui_ ? base::i18n::IsRTL() : false;
+view.h:553:  // only if base::i18n::IsRTL() returns true.
+view.h:856:                              base::string16* tooltip) const;
+view.h:859:                                      base::string16* tooltip,
+repeat_controller.h:26:  explicit RepeatController(const base::Closure& callback);
+repeat_controller.h:40:  base::OneShotTimer<RepeatController> timer_;
+repeat_controller.h:42:  base::Closure callback_;
+views_delegate.cc:30:void ViewsDelegate::notifyMenuItemFocused(const base::string16& menu_name,
+views_delegate.cc:31:                                          const base::string16& menu_item_name,
+views_delegate.cc:65:base::TimeDelta ViewsDelegate::getDefaultTextfieldObscuredRevealDuration() {
+views_delegate.cc:66:  return base::TimeDelta();
+views_delegate.cc:81:                                          const base::Closure& callback) {
+view_model_unittest.cc:21:    result += base::IntToString(model.ideal_bounds(i).x());
+view_model_unittest.cc:32:    result += base::IntToString(model.view_at(i)->id());
+accessible_pane_view.h:123:  base::WeakPtrFactory<AccessiblePaneView> method_factory_;
+widget/widget.cc:43:static const base::string16 kEmptyTitle = base::string16();
+widget/widget.cc:150:                             const base::string16& title,
+widget/widget.cc:206:                              const base::string16&,
+widget/widget.cc:497:void Widget::setWindowTitle(const base::string16& title) {
+widget/widget.cc:529:  DCHECK_EQ(internal_widget_->getThreadID(), base::PlatformThread::CurrentId())
+widget/widget.cc:830:    base::AutoReset<bool> resetter(&closing_, false);
+widget/widget.cc:857:  if (internal_widget_->getThreadID() != base::PlatformThread::CurrentId()) {
+widget/widget.cc:1193:  base::AutoReset<bool> resetter(&need_to_apply_cursor_, true);
+widget/internal_widget_handlers.cc:40:  DCHECK_EQ(internal_widget_->getThreadID(), base::PlatformThread::CurrentId())
+widget/internal_widget_handlers.cc:227:  DCHECK_EQ(internal_widget_->getThreadID(), base::PlatformThread::CurrentId())
+widget/tooltip.cc:129:      show_timer_.Start(FROM_HERE, base::TimeDelta::FromMilliseconds(timeout),
+widget/tooltip.cc:165:void Tooltip::setText(const base::string16& tooltip_text) {
+widget/tooltip.cc:185:void Tooltip::setTextWithIcon(const base::string16& tooltip_text,
+widget/tooltip.cc:221:  widget->setWindowTitle(base::UTF8ToUTF16("Tooltip"));
+widget/tooltip.cc:265:  close_timer_.Start(FROM_HERE, base::TimeDelta::FromMilliseconds(timeout),
+widget/candidate/candidate.cc:63:  candidate_widget_->setWindowTitle(base::UTF8ToUTF16("Candidate"));
+widget/candidate/candidate_cell_view.cc:44:    view->setText(base::UTF8ToUTF16(std::string()));
+widget/candidate/candidate_cell_view.cc:46:    view->setText(base::UTF8ToUTF16(std::to_string((index + 1))));
+widget/candidate/candidate_cell_view.cc:53:  view->setText(base::UTF8ToUTF16(string));
+widget/widget.h:128:                              const base::string16& title,
+widget/widget.h:199:  void setWindowTitle(const base::string16& title);
+widget/widget.h:200:  const base::string16& getWindowTitle() const;
+widget/widget.h:281:  // Post close task using base::UILoop. If can't post close task, returns false
+widget/widget_unittest.cc:973:  textfield->setText(base::ASCIIToUTF16("some text"));
+widget/widget_unittest.cc:1309:        5, 5, 0, base::TimeDelta(),
+widget/widget_unittest.cc:1313:        25, 15, 0, base::TimeDelta(),
+widget/widget_unittest.cc:1316:    ui::GestureEvent end(25, 15, 0, base::TimeDelta(),
+widget/widget_unittest.cc:1327:        65, 5, 0, base::TimeDelta(),
+widget/widget_unittest.cc:1331:        85, 15, 0, base::TimeDelta(),
+widget/widget_unittest.cc:1334:    ui::GestureEvent end(85, 15, 0, base::TimeDelta(),
+widget/widget_unittest.cc:1577:    base::string16 empty;
+widget/widget_unittest.cc:1578:    base::string16 s1(base::UTF8ToUTF16("Title1"));
+widget/widget_unittest.cc:1579:    base::string16 s2(base::UTF8ToUTF16("Title2"));
+widget/widget_unittest.cc:1580:    base::string16 s3(base::UTF8ToUTF16("TitleLong"));
+widget/widget_unittest.cc:1708:      base::MessageLoop::current()->quitNow();
+widget/widget_unittest.cc:1773:  base::RunLoop().Run();
+widget/widget_unittest.cc:1868:  ui::GestureEvent tap_down(15, 15, 0, base::TimeDelta(),
+widget/widget_unittest.cc:1885:                     base::TimeDelta(),
+widget/widget_unittest.cc:1889:      : GestureEvent(x, y, 0, base::TimeDelta(), details) {}
+widget/tooltip.h:27:  void setText(const base::string16& tooltip_text);
+widget/tooltip.h:28:  void setTextWithIcon(const base::string16& tooltip_text,
+widget/tooltip.h:46:  base::OneShotTimer<Tooltip> show_timer_;
+widget/tooltip.h:47:  base::OneShotTimer<Tooltip> close_timer_;
+widget/tooltip_manager.cc:24:    base::string16 tooltip_text;
+widget/root_view.cc:774:  scoped_ptr<base::hash_set<intptr_t> > damaged_views(
+widget/root_view.cc:775:      new base::hash_set<intptr_t>());
+widget/internal_widget.h:64:  static const base::string16 kDefaultTitle;
+widget/internal_widget.h:65:  static const base::string16 kDefaultClassName;
+widget/internal_widget.h:100:  void setWindowTitle(const base::string16& title);
+widget/internal_widget.h:101:  const base::string16& getWindowTitle() const;
+widget/internal_widget.h:450:  base::string16 title_;
+widget/root_view_unittest.cc:204:      base::TimeDelta(),
+widget/root_view_unittest.cc:209:      5, 5, 0, base::TimeDelta(), ui::GestureEventDetails(ui::ET_GESTURE_END));
+widget/root_view_unittest.cc:223:      base::TimeDelta(),
+widget/root_view_unittest.cc:228:      25, 5, 0, base::TimeDelta(), ui::GestureEventDetails(ui::ET_GESTURE_END));
+widget/root_view_unittest.cc:242:      base::TimeDelta(),
+widget/root_view_unittest.cc:247:      25, 5, 0, base::TimeDelta(), ui::GestureEventDetails(ui::ET_GESTURE_END));
+widget/root_view_unittest.cc:289:      base::TimeDelta(),
+widget/root_view_unittest.cc:294:      5, 5, 0, base::TimeDelta(), ui::GestureEventDetails(ui::ET_GESTURE_END));
+widget/root_view_unittest.cc:308:      base::TimeDelta(),
+widget/root_view_unittest.cc:313:      25, 5, 0, base::TimeDelta(), ui::GestureEventDetails(ui::ET_GESTURE_END));
+widget/root_view_unittest.cc:327:      base::TimeDelta(),
+widget/root_view_unittest.cc:332:      25, 5, 0, base::TimeDelta(), ui::GestureEventDetails(ui::ET_GESTURE_END));
+widget/widget_delegate.cc:55:// base::string16 WidgetDelegate::getAccessibleWindowTitle() const {
+widget/widget_delegate.cc:83:// base::string16 WidgetDelegate::getWindowClassName() const {
+widget/widget_delegate.cc:84://   return base::string16(base::UTF8ToUTF16("DummyWindowClassName"));
+widget/internal_widget.cc:291:const base::string16 InternalWidget::kDefaultTitle =
+widget/internal_widget.cc:292:    base::UTF8ToUTF16("Untitled Widget");
+widget/internal_widget.cc:293:const base::string16 InternalWidget::kDefaultClassName =
+widget/internal_widget.cc:294:    base::UTF8ToUTF16("InternalWidget");
+widget/internal_widget.cc:418:  const base::string16& title = kDefaultTitle;
+widget/internal_widget.cc:419:  const base::string16& class_name = kDefaultClassName;
+widget/internal_widget.cc:433:      window_type, style, base::UTF16ToUTF8(title).c_str(),
+widget/internal_widget.cc:434:      base::UTF16ToUTF8(class_name).c_str(), icon_handle, false);
+widget/internal_widget.cc:722:void InternalWidget::setWindowTitle(const base::string16& title) {
+widget/internal_widget.cc:727:        getHandle(), base::UTF16ToUTF8(title).c_str());
+widget/internal_widget.cc:732:const base::string16& InternalWidget::getWindowTitle() const {
+widget/widget_interactive_uitest.cc:52:    base::MessageLoop::current()->quitNow();
+widget/widget_interactive_uitest.cc:131:    base::MessageLoopForUI* loop = base::MessageLoopForUI::current();
+widget/widget_interactive_uitest.cc:132:    base::MessageLoop::ScopedNestableTaskAllower allow(loop);
+widget/widget_interactive_uitest.cc:134:    base::RunLoop run_loop;
+widget/widget_interactive_uitest.cc:154:    base::FilePath ui_test_pak_path;
+widget/widget_interactive_uitest.cc:289:  ui::GestureEvent tap_down(15, 15, 0, base::TimeDelta(),
+widget/widget_interactive_uitest.cc:291:  ui::GestureEvent end(15, 15, 0, base::TimeDelta(),
+widget/widget_interactive_uitest.cc:347:  base::MessageLoop::current()->PostTask(
+widget/widget_interactive_uitest.cc:349:      base::Bind(&Widget::onMouseEvent, base::Unretained(second),
+widget/widget_interactive_uitest.cc:350:                 base::Owned(new ui::MouseEvent(
+widget/widget_interactive_uitest.cc:534:    SCOPED_TRACE(base::StringPrintf("Child view %d", i));
+widget/widget_interactive_uitest.cc:761:  textfield->setText(base::ASCIIToUTF16("some text"));
+widget/widget_interactive_uitest.cc:871:    base::FilePath ui_test_pak_path;
+widget/widget_interactive_uitest.cc:874:    ViewsTestBase::setUp();
+widget/widget_delegate.h:60:  // virtual base::string16 getAccessibleWindowTitle() const;
+widget/widget_delegate.h:85:  // virtual base::string16 getWindowClassName() const;
+view.cc:555:  return base::i18n::IsRTL() ? (width() - bounds.x() - bounds.width())
+view.cc:560://  return base::i18n::IsRTL() ? (width() - bounds.getX() - bounds.getWidth())
+view.cc:565:  return base::i18n::IsRTL() ? width() - x : x;
+view.cc:569:  return base::i18n::IsRTL() ? width() - x - w : x;
+view.cc:847:      scoped_ptr<base::hash_set<intptr_t> > damaged_views(
+view.cc:848:          new base::hash_set<intptr_t>());
+view.cc:1293:bool View::getTooltipText(const gfx::Point& p, base::string16* tooltip) const {
+view.cc:1298:                                  base::string16* tooltip,
+view.cc:2408:  base::FilePath path;
+examples/button_example.cc:18:using base::ASCIIToUTF16;
+examples/multiline_example.h:39:                       const base::string16& new_contents) override;
+examples/examples_window.cc:107:  base::string16 getItemAt(int index) override {
+examples/examples_window.cc:108:    return base::UTF8ToUTF16(example_list_[index]->example_title());
+examples/examples_window.cc:166:    status_label_->setText(base::UTF8ToUTF16(status));
+examples/examples_window.cc:176:  base::string16 getWindowTitle() const override {
+examples/examples_window.cc:177:    return base::ASCIIToUTF16("Views Examples");
+examples/examples_window.cc:183:      base::MessageLoopForUI::current()->quit();
+examples/table_example.h:43:  base::string16 getText(int row, int column_id) override;
+examples/example_base.cc:52:ExampleBase::~ExampleBase() {}
+examples/example_base.cc:54:ExampleBase::ExampleBase(const char* title) : example_title_(title) {
+examples/example_base.cc:59:void ExampleBase::printStatus(const char* format, ...) {
+examples/example_base.cc:63:  base::StringAppendV(&msg, format, ap);
+examples/example_combobox_model.h:21:  base::string16 getItemAt(int index) override;
+examples/label_example.cc:19:using base::ASCIIToUTF16;
+examples/label_example.cc:20:using base::WideToUTF16;
+examples/label_example.cc:139:                                   const base::string16& new_contents) {
+examples/label_example.cc:178:  multiline_ = new Checkbox(base::ASCIIToUTF16("Multiline"));
+examples/label_example.cc:181:  shadows_ = new Checkbox(base::ASCIIToUTF16("Shadows"));
+examples/label_example.cc:204:  layout->addView(new Label(base::ASCIIToUTF16(name)));
+examples/content_client/examples_main.cc:16:  content::InitializeSandboxInfo(const base::string16&sandbox_info);
+examples/content_client/examples_main_delegate.cc:46:  content::SetContentClient(const base::string16& content_client_);
+examples/content_client/examples_browser_main_parts.cc:62:  base::RunLoop run_loop(const base::string16&accelerator_handler);
+examples/content_client/examples_browser_main_parts.cc:64:  base::RunLoop run_loop;
+examples/widget_example.cc:16:using base::ASCIIToUTF16;
+examples/widget_example.cc:27:  base::string16 getWindowTitle() const override;
+examples/widget_example.cc:41:base::string16 DialogExample::getWindowTitle() const {
+examples/checkbox_example.cc:23:  button_ = new Checkbox(base::ASCIIToUTF16("Checkbox"));
+examples/scroll_view_example.cc:15:using base::ASCIIToUTF16;
+examples/examples_main.cc:46:  base::AtExitManager at_exit;
+examples/examples_main.cc:60:  base::MessageLoopForUI message_loop;
+examples/examples_main.cc:62:  base::i18n::InitializeICU();
+examples/examples_main.cc:66:  base::FilePath ui_test_pak_path;
+examples/examples_main.cc:91:    base::RunLoop().Run();
+examples/progress_bar_example.cc:54:  minus_button_ = new LabelButton(this, base::ASCIIToUTF16("-"));
+examples/progress_bar_example.cc:58:  plus_button_ = new LabelButton(this, base::ASCIIToUTF16("+"));
+examples/multiline_example.cc:18:using base::ASCIIToUTF16;
+examples/multiline_example.cc:87:  void setText(const base::string16& new_contents) {
+examples/multiline_example.cc:130:  const base::string16 kTestString = base::WideToUTF16(L"qwerty"
+examples/multiline_example.cc:174:                                       const base::string16& new_contents) {
+examples/multiline_example.cc:185:                                               base::string16());
+examples/textfield_example.cc:17:using base::ASCIIToUTF16;
+examples/textfield_example.cc:18:using base::UTF16ToUTF8;
+examples/textfield_example.cc:84:                                       const base::string16& new_contents) {
+examples/textfield_example.cc:109:    base::string16 empty;
+examples/menu_example.cc:18:using base::ASCIIToUTF16;
+examples/menu_example.cc:62:  explicit ExampleMenuButton(const base::string16& test);
+examples/menu_example.cc:178:ExampleMenuButton::ExampleMenuButton(const base::string16& test)
+examples/bubble_example.cc:14:using base::ASCIIToUTF16;
+examples/bubble_example.cc:31:base::string16 GetArrowName(BubbleBorder::Arrow arrow) {
+examples/tree_view_example.cc:14:using base::ASCIIToUTF16;
+examples/text_example.cc:66:    : text_(base::ASCIIToUTF16(kShortText)),
+examples/text_example.cc:88:  void set_text(const base::string16& text) { text_ = text; }
+examples/text_example.cc:100:  base::string16 text_;
+examples/text_example.cc:122:  Checkbox* checkbox = new Checkbox(base::ASCIIToUTF16(name));
+examples/text_example.cc:133:  layout->addView(new Label(base::ASCIIToUTF16(name)));
+examples/text_example.cc:223:        text_view_->set_text(base::ASCIIToUTF16(kShortText));
+examples/text_example.cc:226:        text_view_->set_text(base::ASCIIToUTF16(kLongText));
+examples/text_example.cc:229:        text_view_->set_text(base::ASCIIToUTF16(kAmpersandText));
+examples/text_example.cc:232:        text_view_->set_text(base::WideToUTF16(kRightToLeftText));
+examples/slider_example.cc:40:  label_->setText(base::ASCIIToUTF16(base::StringPrintf("%.3lf", value)));
+examples/combobox_example.h:24:  base::string16 getItemAt(int index) override;
+examples/combobox_example.cc:25:base::string16 ComboboxModelExample::getItemAt(int index) {
+examples/combobox_example.cc:26:  return base::UTF8ToUTF16(base::StringPrintf("Item %d", index));
+examples/combobox_example.cc:49:  printStatus("Selected: %s", base::UTF16ToUTF8(combobox_model_.getItemAt(
+examples/tabbed_pane_example.cc:12:using base::ASCIIToUTF16;
+examples/tabbed_pane_example.cc:62:    const base::string16 label = ASCIIToUTF16("Added at 1");
+examples/tabbed_pane_example.cc:77:  ExampleBase::printStatus("Tab Count:%d, Selected Tab:%d",
+examples/textfield_example.h:35:                       const base::string16& new_contents) override;
+examples/example_combobox_model.cc:23:base::string16 ExampleComboboxModel::getItemAt(int index) {
+examples/example_combobox_model.cc:24:  return base::ASCIIToUTF16(strings_[index]);
+examples/link_example.cc:22:  link_ = new Link(base::ASCIIToUTF16("Click me!"));
+examples/table_example.cc:17:using base::ASCIIToUTF16;
+examples/table_example.cc:110:base::string16 TableExample::getText(int row, int column_id) {
+examples/table_example.cc:112:    return base::string16();
+examples/table_example.cc:146:              base::UTF16ToASCII(getText(table_->selection_model().active(),
+examples/table_example.cc:152:              base::UTF16ToASCII(getText(table_->selection_model().active(),
+examples/radio_button_example.cc:26:  select_ = new LabelButton(this, base::ASCIIToUTF16("Select"));
+examples/radio_button_example.cc:27:  status_ = new LabelButton(this, base::ASCIIToUTF16("Show Status"));
+examples/radio_button_example.cc:32:        base::UTF8ToUTF16(base::StringPrintf(
+examples/message_box_example.cc:13:using base::ASCIIToUTF16;
+examples/label_example.h:43:                       const base::string16& new_contents) override;
+controls/label_unittest.cc:17:using base::ASCIIToUTF16;
+controls/label_unittest.cc:29:  base::i18n::SetICUDefaultLocale(rtl ? "he" : "en");
+controls/label_unittest.cc:30:  EXPECT_EQ(rtl, base::i18n::IsRTL());
+controls/label_unittest.cc:55:  base::string16 test_text(ASCIIToUTF16("A random string."));
+controls/label_unittest.cc:69:  const bool was_rtl = base::i18n::IsRTL();
+controls/label_unittest.cc:74:    SetRTL(!base::i18n::IsRTL());
+controls/label_unittest.cc:75:    bool reverse_alignment = base::i18n::IsRTL();
+controls/label_unittest.cc:90:      label.setText(rtl ? base::WideToUTF16(L"\x5d0") : ASCIIToUTF16("A"));
+controls/label_unittest.cc:96:  EXPECT_EQ(was_rtl, base::i18n::IsRTL());
+controls/label_unittest.cc:110:  base::string16 test_text(ASCIIToUTF16("Password!"));
+controls/label_unittest.cc:138:  base::string16 test_text = base::UTF8ToUTF16("\xF0\x9D\x84\x9E");
+controls/label_unittest.cc:152:  base::string16 tooltip;
+controls/label_unittest.cc:163:  base::string16 tooltip_text(ASCIIToUTF16("The tooltip!"));
+controls/label_unittest.cc:175:  label.setTooltipText(base::string16());
+controls/label_unittest.cc:198:  label.setTooltipText(base::string16());
+controls/label_unittest.cc:224:  label.setTooltipText(base::string16());
+controls/label_unittest.cc:363:  base::string16 paint_text;
+controls/label_unittest.cc:368:  label.setText(base::WideToUTF16(L"  \x5d0\x5d1\x5d2 abc"));
+controls/label_unittest.cc:375:  label.setText(base::WideToUTF16(L"ltr \x5d0\x5d1\x5d2 abc"));
+controls/label_unittest.cc:393:  base::string16 paint_text;
+controls/label_unittest.cc:519:  base::string16 paint_text;
+controls/label_unittest.cc:631:  base::i18n::SetICUDefaultLocale("he");
+controls/label_unittest.cc:640:  base::string16 paint_text;
+controls/label_unittest.cc:751:  base::i18n::SetICUDefaultLocale(locale);
+controls/label_unittest.cc:763:  base::i18n::SetICUDefaultLocale("he");
+controls/label_unittest.cc:773:  base::string16 paint_text;
+controls/label_unittest.cc:873:  base::i18n::SetICUDefaultLocale(locale);
+controls/styled_label_unittest.cc:20:using base::ASCIIToUTF16;
+controls/styled_label_unittest.cc:381:  base::string16 tooltip;
+controls/styled_label.cc:33:    const base::string16& text,
+controls/styled_label.cc:99:StyledLabel::StyledLabel(const base::string16& text,
+controls/styled_label.cc:103:  base::TrimWhitespace(text, base::TRIM_TRAILING, &text_);
+controls/styled_label.cc:108:void StyledLabel::setText(const base::string16& text) {
+controls/styled_label.cc:220:  base::string16 remaining_string = text_;
+controls/styled_label.cc:229:      base::TrimWhitespace(remaining_string, base::TRIM_LEADING,
+controls/styled_label.cc:240:    std::vector<base::string16> substrings;
+controls/styled_label.cc:264:          base::TrimWhitespace(remaining_string, base::TRIM_LEADING,
+controls/styled_label.cc:276:    base::string16 chunk = substrings[0];
+controls/throbber.h:52:  base::Time start_time_;  // Time when Start was called.
+controls/throbber.h:54:  base::TimeDelta frame_time_;  // How long one frame is displayed.
+controls/throbber.h:55:  base::RepeatingTimer<Throbber> timer_;  // Used to schedule Run calls.
+controls/throbber.h:91:  base::OneShotTimer<SmoothedThrobber> start_timer_;
+controls/throbber.h:92:  base::OneShotTimer<SmoothedThrobber> stop_timer_;
+controls/table_origin/table_view.cc:332://  base::AutoReset<bool> reseter(&in_set_visible_column_width_, true); // removed 160808
+controls/table_origin/table_view.cc:411:    base::string16 text = editor_->text();
+controls/table_origin/table_view.cc:620:                               base::string16* tooltip) const {
+controls/table_origin/table_view.cc:700:  if (base::i18n::IsRTL())
+controls/table_origin/table_view.cc:1174:                               base::string16* tooltip,
+controls/table_origin/table_view.cc:1186:  const base::string16 text(model_->getText(viewToModel(row),
+controls/table_origin/table_view.cc:1208:void TableView::setVisibleColumnTitle(int index, base::string16 title) {
+controls/table_origin/table_view_observer.h:36:  virtual void editingEnd(int model_index, base::string16& new_contents) {}
+controls/table_origin/test_table_model.cc:22:base::string16 TestTableModel::getText(int row, int column_id) {
+controls/table_origin/test_table_model.cc:23:  return base::ASCIIToUTF16(base::IntToString(row) + "x" +
+controls/table_origin/test_table_model.cc:24:                            base::IntToString(column_id));
+controls/table_origin/table_utils_unittest.cc:24:    result += base::IntToString(values[i]);
+controls/table_origin/table_header.cc:140:      if (base::i18n::IsRTL()) {
+controls/table_origin/table_header.cc:158:      const int scale = base::i18n::IsRTL() ? -1 : 1;
+controls/table_origin/table_header.cc:281:  const int scale = base::i18n::IsRTL() ? -1 : 1;
+controls/table_origin/test_table_model.h:18:  base::string16 getText(int row, int column_id) override;
+controls/table_origin/table_view_unittest.cc:24:    return "rows=" + base::IntToString(region.min_row) + " " +
+controls/table_origin/table_view_unittest.cc:25:        base::IntToString(region.max_row) + " cols=" +
+controls/table_origin/table_view_unittest.cc:26:        base::IntToString(region.min_column) + " " +
+controls/table_origin/table_view_unittest.cc:27:        base::IntToString(region.max_column);
+controls/table_origin/table_view_unittest.cc:70:  base::string16 getText(int row, int column_id) override;
+controls/table_origin/table_view_unittest.cc:118:base::string16 TestTableModel2::getText(int row, int column_id) {
+controls/table_origin/table_view_unittest.cc:119:  return base::IntToString16(rows_[row][column_id]);
+controls/table_origin/table_view_unittest.cc:136:    result += base::IntToString(table->viewToModel(i));
+controls/table_origin/table_view_unittest.cc:147:    result += base::IntToString(table->modelToView(i));
+controls/table_origin/table_view_unittest.cc:178:    columns[0].title = base::ASCIIToUTF16("Title Column 0");
+controls/table_origin/table_view_unittest.cc:180:    columns[1].title = base::ASCIIToUTF16("Title Column 1");
+controls/table_origin/table_view_unittest.cc:202:    ui::GestureEvent tap(0, y, 0, base::TimeDelta(), event_details);
+controls/table_origin/table_view_unittest.cc:210:    std::string result = "active=" + base::IntToString(model.active()) +
+controls/table_origin/table_view_unittest.cc:211:        " anchor=" + base::IntToString(model.anchor()) +
+controls/table_origin/table_view_unittest.cc:218:      result += base::IntToString(selection[i]);
+controls/table_origin/table_view_unittest.cc:313:      base::TimeDelta(),
+controls/table_origin/table_view_unittest.cc:320:      base::TimeDelta(),
+controls/table_origin/table_view.h:210:                      base::string16* tooltip) const override;
+controls/table_origin/table_view.h:232:  void setVisibleColumnTitle(int index, base::string16 title);
+controls/table_origin/table_view.h:362:                      base::string16* tooltip,
+controls/single_split_view.h:85:  void setAccessibleName(const base::string16& name);
+controls/single_split_view.h:149:  base::string16 accessible_name_;
+controls/button/blue_button_unittest.cc:20:  TestBlueButton() : BlueButton(NULL, base::ASCIIToUTF16("foo")) {}
+controls/button/blue_button_unittest.cc:35:  LabelButton button(NULL, base::ASCIIToUTF16("foo"));
+controls/button/button.h:54:  void setTooltipText(const base::string16& tooltip_text);
+controls/button/button.h:59:  void setAccessibleName(const base::string16& name);
+controls/button/button.h:63:                      base::string16* tooltip) const override;
+controls/button/button.h:85:  base::string16 tooltip_text_;
+controls/button/button.h:88:  base::string16 accessible_name_;
+controls/button/blue_button.h:18:  BlueButton(ButtonListener* listener, const base::string16& text);
+controls/button/vertical_button.cc:44:                               const base::string16& text)
+controls/button/radio_button.cc:20:RadioButton::RadioButton(const base::string16& label, int group_id)
+controls/button/menu_button.h:37:    base::WeakPtr<MenuButton> menu_button_;
+controls/button/menu_button.h:50:             const base::string16& text,
+controls/button/menu_button.h:114:  base::TimeTicks menu_closed_time_;
+controls/button/menu_button.h:132:  base::WeakPtrFactory<MenuButton> weak_factory_;
+controls/button/custom_button_unittest.cc:40:  base::TimeDelta time_stamp = base::TimeDelta::FromMicroseconds(0);
+controls/button/custom_button_unittest.cc:144:  base::string16 text;
+controls/button/radio_button.h:20:  RadioButton(const base::string16& label, int group_id);
+controls/button/text_button.cc:64:const char TextButtonBase::kViewClassName[] = "TextButtonBase";
+controls/button/text_button.cc:195:TextButtonBase::TextButtonBase(ButtonListener* listener, base::string16& text)
+controls/button/text_button.cc:216:  TextButtonBase::onNativeThemeChanged(GetNativeTheme());
+controls/button/text_button.cc:220:TextButtonBase::~TextButtonBase() {}
+controls/button/text_button.cc:222:void TextButtonBase::setIsDefault(bool is_default) {
+controls/button/text_button.cc:233:void TextButtonBase::setText(const base::string16& text) {
+controls/button/text_button.cc:241:void TextButtonBase::setFont(const gfx::Font& font) {
+controls/button/text_button.cc:246:void TextButtonBase::setEnabledColor(SkColor color) {
+controls/button/text_button.cc:252:void TextButtonBase::setDisabledColor(SkColor color) {
+controls/button/text_button.cc:258:void TextButtonBase::setHighlightColor(SkColor color) {
+controls/button/text_button.cc:263:void TextButtonBase::setHoverColor(SkColor color) {
+controls/button/text_button.cc:268:void TextButtonBase::setTextShadowColors(SkColor active_color,
+controls/button/text_button.cc:275:void TextButtonBase::setTextShadowOffset(int x, int y) {
+controls/button/text_button.cc:279:void TextButtonBase::clearEmbellishing() {
+controls/button/text_button.cc:283:void TextButtonBase::clearMaxTextSize() {
+controls/button/text_button.cc:287:void TextButtonBase::setShowMultipleIconStates(bool show_multiple_icon_states) {
+controls/button/text_button.cc:291:void TextButtonBase::setMultiLine(bool multi_line) {
+controls/button/text_button.cc:300:gfx::Size TextButtonBase::getPreferredSize() const {
+controls/button/text_button.cc:319:int TextButtonBase::getHeightForWidth(int w) const {
+controls/button/text_button.cc:333:void TextButtonBase::onPaint(gfx::Canvas* canvas) {
+controls/button/text_button.cc:337:void TextButtonBase::onBoundsChanged(const gfx::Rect& previous_bounds) {
+controls/button/text_button.cc:342:const gfx::Animation* TextButtonBase::getAnimation() const {
+controls/button/text_button.cc:346:void TextButtonBase::updateColor() {
+controls/button/text_button.cc:350:void TextButtonBase::updateTextSize() {
+controls/button/text_button.cc:370:void TextButtonBase::calculateTextSize(gfx::Size* text_size,
+controls/button/text_button.cc:382:int TextButtonBase::computeCanvasStringFlags() const {
+controls/button/text_button.cc:401:void TextButtonBase::getExtraParams(
+controls/button/text_button.cc:413:gfx::Rect TextButtonBase::getContentBounds(int extra_width) const {
+controls/button/text_button.cc:440:gfx::Rect TextButtonBase::getTextBounds() const {
+controls/button/text_button.cc:444:void TextButtonBase::paintButton(gfx::Canvas* canvas, PaintButtonMode mode) {
+controls/button/text_button.cc:502:gfx::Size TextButtonBase::getMinimumSize() const {
+controls/button/text_button.cc:506:void TextButtonBase::onEnabledChanged() {
+controls/button/text_button.cc:513:const char* TextButtonBase::getClassName() const {
+controls/button/text_button.cc:517:void TextButtonBase::onNativeThemeChanged(const ui::NativeTheme* theme) {
+controls/button/text_button.cc:540:gfx::Rect TextButtonBase::getThemePaintRect() const {
+controls/button/text_button.cc:544:ui::NativeTheme::State TextButtonBase::getThemeState(
+controls/button/text_button.cc:562:const gfx::Animation* TextButtonBase::getThemeAnimation() const {
+controls/button/text_button.cc:573:ui::NativeTheme::State TextButtonBase::getBackgroundThemeState(
+controls/button/text_button.cc:579:ui::NativeTheme::State TextButtonBase::getForegroundThemeState(
+controls/button/text_button.cc:623:  gfx::Size prefsize(TextButtonBase::getPreferredSize());
+controls/button/text_button.cc:655:  TextButtonBase::paintButton(canvas, mode);
+controls/button/text_button.cc:696:  TextButtonBase::getExtraParams(params);
+controls/button/button_dropdown.cc:69:    /*base::MessageLoop::current()->postDelayedTask(
+controls/button/button_dropdown.cc:71:        base::Bind(const base::string16&ButtonDropDown::showDropDownMenu,
+controls/button/button_dropdown.cc:74:        base::TimeDelta::FromMilliseconds(kMenuTimerDelay));
+controls/button/button_dropdown.cc:160:  if (base::i18n::IsRTL())
+controls/button/button_dropdown.cc:205:  if (base::i18n::IsRTL())
+controls/button/button_dropdown.cc:247:    MenuItemView* menu = new MenuItemView(const base::string16&menu_delegate);
+controls/button/text_button.h:134:  virtual void setText(const base::string16& text);
+controls/button/text_button.h:135:  const base::string16& text() const { return text_; }
+controls/button/text_button.h:204:  TextButtonBase(ButtonListener* listener, base::string16& text);
+controls/button/text_button.h:254:  base::string16 text_;
+controls/button/text_button.h:328:  TextButton(ButtonListener* listener, base::string16& text);
+controls/button/label_button.cc:43:  static base::LazyInstance<gfx::FontList>::Leaky font_list =
+controls/button/label_button.cc:55:  static base::LazyInstance<gfx::FontList>::Leaky font_list =
+controls/button/label_button.cc:76:LabelButton::LabelButton(ButtonListener* listener, const base::string16& text)
+controls/button/label_button.cc:80:                         const base::string16& text,
+controls/button/label_button.cc:132:const base::string16& LabelButton::getText() const {
+controls/button/label_button.cc:136:void LabelButton::setText(const base::string16& text) {
+controls/button/label_button.cc:362:  if (base::i18n::IsRTL() && adjusted_alignment != gfx::ALIGN_CENTER)
+controls/button/checkbox.h:22:  explicit Checkbox(const base::string16& label);
+controls/button/button_dropdown.h:87:  base::WeakPtrFactory<ButtonDropDown> show_menu_factory_;
+controls/button/label_button.h:35:  LabelButton(ButtonListener* listener, const base::string16& text);
+controls/button/label_button.h:37:              const base::string16& text,
+controls/button/label_button.h:64:  const base::string16& getText() const;
+controls/button/label_button.h:65:  virtual void setText(const base::string16& text);
+controls/button/blue_button.cc:17:BlueButton::BlueButton(ButtonListener* listener, const base::string16& text)
+controls/button/checkbox.cc:20:Checkbox::Checkbox(const base::string16& label)
+controls/button/button.cc:42:void Button::setTooltipText(const base::string16& tooltip_text) {
+controls/button/button.cc:49:void Button::setAccessibleName(const base::string16& name) {
+controls/button/button.cc:57:                            base::string16* tooltip) const {
+controls/button/image_button.h:134:  void setToggledTooltipText(const base::string16& tooltip);
+controls/button/image_button.h:142:                      base::string16* tooltip) const override;
+controls/button/image_button.h:157:  base::string16 toggled_tooltip_text_;
+controls/button/vertical_button.h:32:    VerticalButton(ButtonListener* listener, const base::string16& text);
+controls/button/menu_button.cc:26:using base::TimeTicks;
+controls/button/menu_button.cc:27:using base::TimeDelta;
+controls/button/menu_button.cc:66:                       const base::string16& text,
+controls/button/menu_button.cc:104:    if (base::i18n::IsRTL())
+controls/button/menu_button.cc:108:    if (base::i18n::IsRTL())
+controls/button/image_button.cc:228:void ToggleImageButton::setToggledTooltipText(const base::string16& tooltip) {
+controls/button/image_button.cc:257:                                       base::string16* tooltip) const {
+controls/button/menu_button_unittest.cc:23:using base::ASCIIToUTF16;
+controls/button/menu_button_unittest.cc:35:    ViewsTestBase::setUp();
+controls/button/menu_button_unittest.cc:42:    ViewsTestBase::tearDown();
+controls/button/menu_button_unittest.cc:71:    const base::string16 label(ASCIIToUTF16("button"));
+controls/button/label_button_unittest.cc:15:using base::ASCIIToUTF16;
+controls/button/label_button_unittest.cc:32:  const base::string16 text(ASCIIToUTF16("abc"));
+controls/button/label_button_unittest.cc:51:  LabelButton button(NULL, base::string16());
+controls/button/label_button_unittest.cc:55:  const base::string16 short_text(ASCIIToUTF16("abcdefghijklm"));
+controls/button/label_button_unittest.cc:56:  const base::string16 long_text(ASCIIToUTF16("abcdefghijklmnopqrstuvwxyz"));
+controls/button/label_button_unittest.cc:82:  LabelButton button(NULL, base::string16());
+controls/button/label_button_unittest.cc:114:  LabelButton button(NULL, base::string16());
+controls/button/label_button_unittest.cc:117:  const base::string16 text(ASCIIToUTF16("abcdefghijklm"));
+controls/button/label_button_unittest.cc:152:  button.setText(base::string16());
+controls/button/label_button_unittest.cc:171:  const base::string16 text(ASCIIToUTF16("abc"));
+controls/button/label_button_unittest.cc:194:  const base::string16 text(ASCIIToUTF16("abc"));
+controls/button/label_button_unittest.cc:195:  const base::string16 longer_text(ASCIIToUTF16("abcdefghijklm"));
+controls/label.h:37:  explicit Label(const base::string16& text);
+controls/label.h:38:  Label(const base::string16& text, const gfx::FontList& font_list);
+controls/label.h:48:  const base::string16& text() const;  // { return render_text_->text(); }
+controls/label.h:49:  virtual void setText(const base::string16& text);
+controls/label.h:134:  void setTooltipText(const base::string16& tooltip_text);
+controls/label.h:154:  base::string16 getDisplayTextForTesting();
+controls/label.h:172:                      base::string16* tooltip) const override;
+controls/label.h:194:  void init(const base::string16& text, const gfx::FontList& font_list);
+controls/label.h:200:      const base::string16& text,
+controls/label.h:248:  base::string16 tooltip_text_;
+controls/tabbed_pane/tabbed_pane.h:43:  void addTab(const base::string16& title, View* contents);
+controls/tabbed_pane/tabbed_pane.h:48:  void addTabAtIndex(int index, const base::string16& title, View* contents);
+controls/tabbed_pane/tabbed_pane.h:61:  void setTabTitleAt(int index, const base::string16& title);
+controls/tabbed_pane/tabbed_pane.cc:38:  Tab(TabbedPane* tabbed_pane, const base::string16& title, View* contents);
+controls/tabbed_pane/tabbed_pane.cc:46:  void setTitle(const base::string16& title);
+controls/tabbed_pane/tabbed_pane.cc:89:  void setTitleAt(int index, const base::string16& title);
+controls/tabbed_pane/tabbed_pane.cc:99:Tab::Tab(TabbedPane* tabbed_pane, const base::string16& title, View* contents)
+controls/tabbed_pane/tabbed_pane.cc:120:void Tab::setTitle(const base::string16& title) {
+controls/tabbed_pane/tabbed_pane.cc:250:void TabStrip::setTitleAt(int index, const base::string16& title) {
+controls/tabbed_pane/tabbed_pane.cc:276:void TabbedPane::addTab(const base::string16& title, View* contents) {
+controls/tabbed_pane/tabbed_pane.cc:281:                               const base::string16& title,
+controls/tabbed_pane/tabbed_pane.cc:327:void TabbedPane::setTabTitleAt(int index, const base::string16& title) {
+controls/tabbed_pane/tabbed_pane_unittest.cc:12:using base::ASCIIToUTF16;
+controls/prefix_selector_unittest.cc:14:using base::ASCIIToUTF16;
+controls/prefix_selector_unittest.cc:35:  base::string16 getTextForRow(int row) override { return rows_[row]; }
+controls/prefix_selector_unittest.cc:38:  std::vector<base::string16> rows_;
+controls/tree/tree_item_view.h:19:    TreeItemView(base::string16 title, bool hasChild);
+controls/tree/tree_item_view.h:38:    bool getTooltipText(const gfx::Point& p, base::string16* tooltip) const override;
+controls/tree/tree_item_view.h:43:    void setTitle(base::string16 title);
+controls/tree/tree_item_view.h:44:    base::string16 getTitle() { return title_->text(); }
+controls/tree/tree_item_view.h:80:    const base::string16& commitEdit();
+controls/tree/tree_item_view.h:118:    base::string16 tooltip_text_;
+controls/tree/tree_view_unittest.cc:20:using base::ASCIIToUTF16;
+controls/tree/tree_view_unittest.cc:71:  TestNode* getNodeByTitleImpl(TestNode* node, const base::string16& title);
+controls/tree/tree_view_unittest.cc:91:  return model_node ? base::UTF16ToASCII(model_node->getTitle())
+controls/tree/tree_view_unittest.cc:97:  return model_node ? base::UTF16ToASCII(model_node->getTitle())
+controls/tree/tree_view_unittest.cc:123:                                           const base::string16& title) {
+controls/tree/tree_view_unittest.cc:135:  std::string result = base::UTF16ToASCII(node->model_node()->getTitle());
+controls/tree/tree_view.cc:138:  base::string16 text = editing_view_->commitEdit();
+controls/tree/tree_view.cc:511:                               const base::string16& new_contents) {}
+controls/tree/tree_view.cc:553:base::string16 TreeView::getTextForRow(int row) {
+controls/tree/tree_view.cc:569:  if (base::i18n::IsRTL())
+controls/tree/tree_view.cc:624:      if (base::i18n::IsRTL())
+controls/tree/tree_view.cc:975:         base::UTF16ToUTF8(node->getTitle()).c_str());
+controls/tree/tree_view.cc:1101:      if (base::i18n::IsRTL())
+controls/tree/tree_view.cc:1108:      if (base::i18n::IsRTL())
+controls/tree/tree_view.cc:1129:        base::string16 text = editing_view_->commitEdit();
+controls/tree/tree_view.cc:1257:         base::UTF16ToUTF8(node->getTitle()).c_str());
+controls/tree/tree_view.cc:1269:  printf("itemview title : %s\n", base::UTF16ToUTF8(item_view->getTitle()).c_str());
+controls/tree/tree_view.cc:1279:        printf("parent title : %s\n", base::UTF16ToUTF8(parent->getTreeNode()->getTitle()).c_str());
+controls/tree/tree_item_view.cc:19:TreeItemView::TreeItemView(base::string16 title, bool hasChild)
+controls/tree/tree_item_view.cc:217:const base::string16& TreeItemView::commitEdit(){
+controls/tree/tree_item_view.cc:234:bool TreeItemView::getTooltipText(const gfx::Point& p, base::string16* tooltip) const{
+controls/tree/tree_item_view.cc:262:void TreeItemView::setTitle(base::string16 title){
+controls/tree/tree_view.h:157:                       const base::string16& new_contents) override;
+controls/tree/tree_view.h:169:  base::string16 getTextForRow(int row) override;
+controls/table/table_item_view_listener.h:47:    virtual void labelEditEnd(TableItemView* sender, base::string16& text) {}
+controls/table/table_item_view.cc:85:    base::string16 text = label_->text();
+controls/table/table_item_view.cc:129:  //     base::string16 text = new_text_->text();
+controls/table/table_item_view.cc:137:  base::string16 text = new_text_->text();
+controls/table/table_item_view.cc:165:void TableItem::setLabelText(const base::string16& text) {
+controls/table/table_item_view.cc:191:      base::string16 t = checkbox_->getText();
+controls/table/table_item_view.cc:192:      std::string st = base::UTF16ToUTF8(t);
+controls/table/table_item_view.cc:213:void TableItem::enableCheckbox(const base::string16& text) {
+controls/table/table_item_view.cc:272:                            const base::string16& text = 0) {
+controls/table/table_item_view.cc:301:int TableItemView::insertToRear(int w, const base::string16& text) {
+controls/table/table_item_view.cc:528:void TableItemView::labelEditEnd(ListItemView* sender, base::string16& text) {
+controls/table/table_view.cc:589:                               base::string16* tooltip) const {
+controls/table/table_view.cc:1859:  //  base::AutoReset<bool> reseter(&in_set_visible_column_width_, true); // removed 160808
+controls/table/table_view.cc:1957:  if (base::i18n::IsRTL())
+controls/table/table_view.cc:2625:                               base::string16* tooltip,
+controls/table/table_view.cc:2638:        const base::string16 text(model_->getText(viewToModel(row),
+controls/table/table_view.cc:2660:void TableView::setVisibleColumnTitle(int index, base::string16 title) {
+controls/table/table_adapter.cc:19:                ti->enableCheckbox(base::UTF8ToUTF16(""));
+controls/table/table_adapter.cc:47:            ti->enableCheckbox(base::UTF8ToUTF16(""));
+controls/table/table_adapter.cc:72:            ti->enableCheckbox(base::UTF8ToUTF16(""));
+controls/table/table_view_observer.h:43:  virtual void editingEnd(int model_index, base::string16& new_contents) {}
+controls/table/table_utils.cc:164:int table_natural_less(const base::string16& lhs, const base::string16& rhs)
+controls/table/table_utils.cc:166:  std::string lhsC = base::UTF16ToUTF8(lhs);
+controls/table/table_utils.cc:167:  std::string rhsC = base::UTF16ToUTF8(rhs);
+controls/table/header/headeritemview.cc:47:                               const base::string16& text = 0) {
+controls/table/header/headeritemview.cc:128:    checkbox_ = new Checkbox(base::UTF8ToUTF16(""));
+controls/table/header/headeritemview.h:49:        HeaderItemView(HeaderItemViewListener* listener, int ind, int width, const base::string16& text);
+controls/table/header/header.cc:52:int Header::insertToRear(int w=HDR_DEFAULT_SIZE, const base::string16& text=0) {
+controls/table/header/header.cc:75:int Header::insertTo(int ind, int w=HDR_DEFAULT_SIZE, const base::string16& text=0) {
+controls/table/header/header.h:46:        int insertToRear(int w, const base::string16& text);
+controls/table/header/header.h:53:        int insertTo(int ind, int w, const base::string16& text);
+controls/table/table_header.cc:140:      if (base::i18n::IsRTL()) {
+controls/table/table_header.cc:158:      const int scale = base::i18n::IsRTL() ? -1 : 1;
+controls/table/table_header.cc:287:  const int scale = base::i18n::IsRTL() ? -1 : 1;
+controls/table/table_utils.h:57:int table_natural_less(const base::string16& lhs, const base::string16& rhs);
+controls/table/table_item_view.h:47:    void setLabelText(const base::string16& text) override;
+controls/table/table_item_view.h:61:    void enableCheckbox(const base::string16& text);
+controls/table/table_item_view.h:88:    int insertToRear(int w, const base::string16& text);
+controls/table/table_item_view.h:89:    int insertTo(int ind, int w, const base::string16& text);
+controls/table/table_item_view.h:128:    void enableCheckbox(const base::string16& text) {
+controls/table/table_item_view.h:149:    void labelEditEnd(ListItemView* sender,base::string16& text) override;
+controls/table/include/list_item_view.cc:29:    const base::string16& ListItemView::getLabelText() {
+controls/table/include/control.cc:19:bool Control::getTooltipText(const gfx::Point& p, base::string16* tooltip) const {
+controls/table/include/control.cc:29:void Control::setTooltipText(const base::string16& tooltip_text) {
+controls/table/include/list_item_view.h:29:    virtual void setLabelText(const base::string16& text) {}
+controls/table/include/list_item_view.h:30:    const base::string16& getLabelText();
+controls/table/include/list_item_view_listener.h:15:    virtual void labelEditEnd(ListItemView* sender, base::string16& text) {}
+controls/table/include/control.h:54:                      base::string16* tooltip) const override;
+controls/table/include/control.h:55:        void setTooltipText(const base::string16& tooltip_text);
+controls/table/include/control.h:57:        base::string16 tooltip_text_;
+controls/table/include/control.h:204:       LabelButton* lb = new LabelButton(this, base::UTF8ToUTF16("test BT"));
+controls/table/include/control.h:211:       LabelButton* lb = new LabelButton(this, base::UTF8ToUTF16("test BT"));
+controls/table/table_view.h:113:                      base::string16* tooltip) const override;
+controls/table/table_view.h:371:  void setVisibleColumnTitle(int index, base::string16 title);
+controls/table/table_view.h:501:                      base::string16* tooltip,
+controls/label.cc:28:  init(base::string16(), gfx::FontList());
+controls/label.cc:31:Label::Label(const base::string16& text) {
+controls/label.cc:35:Label::Label(const base::string16& text, const gfx::FontList& font_list) {
+controls/label.cc:47:void Label::setText(const base::string16& new_text) {
+controls/label.cc:137:  if (base::i18n::IsRTL() &&
+controls/label.cc:229:void Label::setTooltipText(const base::string16& tooltip_text) {
+controls/label.cc:246:base::string16 Label::getDisplayTextForTesting() {
+controls/label.cc:247:  base::string16 result;
+controls/label.cc:303:        base::string16(gfx::kEllipsisUTF16), font_list()));
+controls/label.cc:367:bool Label::getTooltipText(const gfx::Point& p, base::string16* tooltip) const {
+controls/label.cc:429:void Label::init(const base::string16& text, const gfx::FontList& font_list) {
+controls/label.cc:462:    const base::string16& text,
+controls/label.cc:494:     std::vector<base::string16> lines;
+controls/label.cc:495:     base::SplitString(render_text_->text(), '\n', &lines);
+controls/label.cc:563:const base::string16& Label::text() const {
+controls/tree_old/tree_view_unittest.cc:20:using base::ASCIIToUTF16;
+controls/tree_old/tree_view_unittest.cc:71:  TestNode* getNodeByTitleImpl(TestNode* node, const base::string16& title);
+controls/tree_old/tree_view_unittest.cc:91:  return model_node ? base::UTF16ToASCII(model_node->getTitle())
+controls/tree_old/tree_view_unittest.cc:97:  return model_node ? base::UTF16ToASCII(model_node->getTitle())
+controls/tree_old/tree_view_unittest.cc:123:                                           const base::string16& title) {
+controls/tree_old/tree_view_unittest.cc:135:  std::string result = base::UTF16ToASCII(node->model_node()->getTitle());
+controls/tree_old/tree_view.cc:557:                               const base::string16& new_contents) {}
+controls/tree_old/tree_view.cc:598:base::string16 TreeView::getTextForRow(int row) {
+controls/tree_old/tree_view.cc:613:  if (base::i18n::IsRTL())
+controls/tree_old/tree_view.cc:641:      if (base::i18n::IsRTL())
+controls/tree_old/tree_view.cc:648:      if (base::i18n::IsRTL())
+controls/tree_old/tree_view.cc:742:      if (base::i18n::IsRTL())
+controls/tree_old/tree_view.cc:886:  if (base::i18n::IsRTL())
+controls/tree_old/tree_view.cc:900:  if (base::i18n::IsRTL())
+controls/tree_old/tree_view.cc:925:  if (base::i18n::IsRTL()) {
+controls/tree_old/tree_view.cc:936:    int delta = base::i18n::IsRTL() ? 1 : -1;
+controls/tree_old/tree_view.h:148:                       const base::string16& new_contents) override;
+controls/tree_old/tree_view.h:160:  base::string16 getTextForRow(int row) override;
+controls/progress_bar.cc:173:void ProgressBar::setTooltipText(const base::string16& tooltip_text) {
+controls/progress_bar.cc:178:                                 base::string16* tooltip) const {
+controls/menu/menu_runner_impl_interface.h:45:  virtual base::TimeDelta getClosingEventTime() const = 0;
+controls/menu/menu_runner_impl_adapter.cc:40:base::TimeDelta MenuRunnerImplAdapter::getClosingEventTime() const {
+controls/menu/menu_item_view.cc:54:                      base::string16* tooltip) const override {
+controls/menu/menu_item_view.cc:140:                                  base::string16* tooltip) const {
+controls/menu/menu_item_view.cc:175://   base::string16 item_text;
+controls/menu/menu_item_view.cc:214:base::string16 MenuItemView::GetAccessibleNameForMenuItem(
+controls/menu/menu_item_view.cc:215:    const base::string16& item_text,
+controls/menu/menu_item_view.cc:216:    const base::string16& minor_text) {
+controls/menu/menu_item_view.cc:217:  base::string16 accessible_name = item_text;
+controls/menu/menu_item_view.cc:221:  const base::char16 amp = '&';
+controls/menu/menu_item_view.cc:222:  while ((index = accessible_name.find(amp, index)) != base::string16::npos &&
+controls/menu/menu_item_view.cc:251:    const base::string16& label,
+controls/menu/menu_item_view.cc:252:    const base::string16& sublabel,
+controls/menu/menu_item_view.cc:253:    const base::string16& minor_text,
+controls/menu/menu_item_view.cc:305:                                           const base::string16& label,
+controls/menu/menu_item_view.cc:307:  return appendMenuItemImpl(item_id, label, base::string16(), base::string16(),
+controls/menu/menu_item_view.cc:312:                                          const base::string16& label) {
+controls/menu/menu_item_view.cc:313:  return appendMenuItemImpl(item_id, label, base::string16(), base::string16(),
+controls/menu/menu_item_view.cc:318:                                                  const base::string16& label,
+controls/menu/menu_item_view.cc:320:  return appendMenuItemImpl(item_id, label, base::string16(), base::string16(),
+controls/menu/menu_item_view.cc:326:    const base::string16& label) {
+controls/menu/menu_item_view.cc:331:  return appendMenuItem(item_id, base::string16(), NORMAL);
+controls/menu/menu_item_view.cc:335:  appendMenuItemImpl(0, base::string16(), base::string16(), base::string16(),
+controls/menu/menu_item_view.cc:340:                                                   const base::string16& label,
+controls/menu/menu_item_view.cc:342:  return appendMenuItemImpl(item_id, label, base::string16(), base::string16(),
+controls/menu/menu_item_view.cc:348:    const base::string16& label,
+controls/menu/menu_item_view.cc:349:    const base::string16& sublabel,
+controls/menu/menu_item_view.cc:350:    const base::string16& minor_text,
+controls/menu/menu_item_view.cc:373:void MenuItemView::setTitle(const base::string16& title) {
+controls/menu/menu_item_view.cc:378:void MenuItemView::setSubtitle(const base::string16& subtitle) {
+controls/menu/menu_item_view.cc:383:void MenuItemView::setMinorText(const base::string16& minor_text) {
+controls/menu/menu_item_view.cc:400:void MenuItemView::setTooltip(const base::string16& tooltip, int item_id) {
+controls/menu/menu_item_view.cc:496:base::char16 MenuItemView::getMnemonic() {
+controls/menu/menu_item_view.cc:503:    if (index != base::string16::npos) {
+controls/menu/menu_item_view.cc:505:        base::char16 char_array[] = {title_[index + 1], 0};
+controls/menu/menu_item_view.cc:510:        return base::i18n::ToLower(char_array)[0];
+controls/menu/menu_item_view.cc:514:  } while (index != base::string16::npos);
+controls/menu/menu_item_view.cc:739:  if (base::i18n::IsRTL())
+controls/menu/menu_item_view.cc:1012:  base::string16 minor_text = getMinorText();
+controls/menu/menu_item_view.cc:1027:  if (base::i18n::IsRTL())
+controls/menu/menu_item_view.cc:1140:  base::string16 minor_text = getMinorText();
+controls/menu/menu_item_view.cc:1166:base::string16 MenuItemView::getMinorText() const {
+controls/menu/menu_item_view.cc:1169:    return base::string16();
+controls/menu/menu_image_util.cc:173:  return GetRtlSubmenuArrowImage(base::i18n::IsRTL(), disabled,
+controls/menu/menu_runner.cc:70:base::TimeDelta MenuRunner::closing_event_time() const {
+controls/menu/menu_message_loop_tos.h:45:  base::Closure message_loop_quit_;
+controls/menu/menu.cc:20:base::string16 Menu::Delegate::getLabel(int id) const {
+controls/menu/menu.cc:21:  return base::string16();
+controls/menu/menu.cc:52:bool Menu::Delegate::getContextualLabel(int id, base::string16* out) const {
+controls/menu/menu.cc:57:  return base::i18n::IsRTL();
+controls/menu/menu.cc:79:                          const base::string16& label,
+controls/menu/menu.cc:86:                       const base::string16& label,
+controls/menu/menu.cc:94:Menu* Menu::appendSubMenu(int item_id, const base::string16& label) {
+controls/menu/menu.cc:98:Menu* Menu::addSubMenu(int index, int item_id, const base::string16& label) {
+controls/menu/menu.cc:103:                                  const base::string16& label,
+controls/menu/menu.cc:108:void Menu::appendMenuItemWithLabel(int item_id, const base::string16& label) {
+controls/menu/menu.cc:114:                                const base::string16& label) {
+controls/menu/menu.cc:123:  addMenuItem(index, item_id, base::string16(), Menu::NORMAL);
+controls/menu/menu.cc:131:                                  const base::string16& label,
+controls/menu/menu.cc:138:                               const base::string16& label,
+controls/menu/menu_runner.h:126:  base::TimeDelta closing_event_time() const;
+controls/menu/menu_model_adapter.h:69:  base::string16 getLabel(int id) const override;
+controls/menu/menu.h:49:    virtual base::string16 getLabel(int id) const;
+controls/menu/menu.h:98:    virtual bool getContextualLabel(int id, base::string16* out) const;
+controls/menu/menu.h:155:                      const base::string16& label,
+controls/menu/menu.h:159:                   const base::string16& label,
+controls/menu/menu.h:165:                      const base::string16& label);
+controls/menu/menu.h:166:  Menu* addSubMenu(int index, int item_id, const base::string16& label);
+controls/menu/menu.h:173:                              const base::string16& label,
+controls/menu/menu.h:177:                                   const base::string16& label,
+controls/menu/menu.h:182:  void appendMenuItemWithLabel(int item_id, const base::string16& label);
+controls/menu/menu.h:185:                            const base::string16& label);
+controls/menu/menu.h:200:                              const base::string16& label,
+controls/menu/menu.h:204:                                   const base::string16& label,
+controls/menu/menu.h:212:  virtual void setMenuLabel(int item_id, const base::string16& label) = 0;
+controls/menu/menu.h:240:                                   const base::string16& label,
+controls/menu/menu_model_adapter.cc:66:  base::string16 label, sublabel, minor_text;
+controls/menu/menu_model_adapter.cc:168:base::string16 MenuModelAdapter::getLabel(int id) const {
+controls/menu/menu_model_adapter.cc:175:  return base::string16();
+controls/menu/menu_controller.cc:62:using base::Time;
+controls/menu/menu_controller.cc:63:using base::TimeDelta;
+controls/menu/menu_controller.cc:95:bool MatchesMnemonic(MenuItemView* menu, base::char16 key) {
+controls/menu/menu_controller.cc:101:bool TitleMatchesMnemonic(MenuItemView* menu, base::char16 key) {
+controls/menu/menu_controller.cc:105:  base::string16 lower_title = base::i18n::ToLower(menu->title());
+controls/menu/menu_controller.cc:259:    start_scroll_time_ = base::Time::Now();
+controls/menu/menu_controller.cc:286:        (base::Time::Now() - start_scroll_time_).inMilliseconds() *
+controls/menu/menu_controller.cc:301:  base::RepeatingTimer<MenuScrollTask> scrolling_timer_;
+controls/menu/menu_controller.cc:304:  base::Time start_scroll_time_;
+controls/menu/menu_controller.cc:371:  closing_event_time_ = base::TimeDelta();
+controls/menu/menu_controller.cc:372:  menu_start_time_ = base::TimeTicks::Now();
+controls/menu/menu_controller.cc:721:    base::TimeDelta time_shown = base::TimeTicks::Now() - menu_start_time_;
+controls/menu/menu_controller.cc:741:      base::TimeDelta shown_time = base::TimeTicks::Now() - menu_start_time_;
+controls/menu/menu_controller.cc:1176:      if (base::i18n::IsRTL())
+controls/menu/menu_controller.cc:1183:      if (base::i18n::IsRTL())
+controls/menu/menu_controller.cc:1268:      closing_event_time_(base::TimeDelta()),
+controls/menu/menu_controller.cc:1269:      menu_start_time_(base::TimeTicks()),
+controls/menu/menu_controller.cc:1275:  active_menu_thread_id_ = base::GetThreadID();
+controls/menu/menu_controller.cc:1336:  if (base::i18n::IsRTL() &&
+controls/menu/menu_controller.cc:1987:    bool layout_is_rtl = base::i18n::IsRTL();
+controls/menu/menu_controller.cc:2226:    base::char16 key,
+controls/menu/menu_controller.cc:2227:    bool (*match_function)(MenuItemView* menu, base::char16 mnemonic)) {
+controls/menu/menu_controller.cc:2277:bool MenuController::selectByChar(base::char16 character) {
+controls/menu/menu_controller.cc:2278:  base::char16 char_array[] = {character, 0};
+controls/menu/menu_controller.cc:2279:  base::char16 key = base::i18n::ToLower(char_array)[0];
+controls/menu/menu_controller.cc:2431:  //      (base::Time::Now() - start_scroll_time_).inMilliseconds() *
+controls/menu/menu_controller.cc:2553:  // base::UILoop::GetUILoop()->endMenuLoop();
+controls/menu/menu_runner_impl_adapter.h:29:  base::TimeDelta getClosingEventTime() const override;
+controls/menu/menu_delegate.h:93:  virtual base::string16 getLabel(int id) const;
+controls/menu/menu_delegate.h:124:  virtual base::string16 getTooltipText(int id,
+controls/menu/menu_delegate.h:148:  virtual bool getContextualLabel(int id, base::string16* out) const;
+controls/menu/menu_delegate.cc:18:base::string16 MenuDelegate::getLabel(int id) const {
+controls/menu/menu_delegate.cc:19:  return base::string16();
+controls/menu/menu_delegate.cc:43:base::string16 MenuDelegate::getTooltipText(
+controls/menu/menu_delegate.cc:46:  return base::string16();
+controls/menu/menu_delegate.cc:72:bool MenuDelegate::getContextualLabel(int id, base::string16* out) const {
+controls/menu/menu_controller.h:121:  base::TimeDelta closing_event_time() const { return closing_event_time_; }
+controls/menu/menu_controller.h:465:      base::char16 key,
+controls/menu/menu_controller.h:466:      bool (*match_function)(MenuItemView* menu, base::char16 mnemonic));
+controls/menu/menu_controller.h:475:  bool selectByChar(base::char16 key);
+controls/menu/menu_controller.h:584:  base::OneShotTimer<MenuController> show_timer_;
+controls/menu/menu_controller.h:590:  base::OneShotTimer<MenuController> cancel_all_timer_;
+controls/menu/menu_controller.h:646:  base::TimeDelta closing_event_time_;
+controls/menu/menu_controller.h:649:  base::TimeTicks menu_start_time_;
+controls/menu/menu_item_view.h:114:                      base::string16* tooltip) const override;
+controls/menu/menu_item_view.h:134:  static base::string16 GetAccessibleNameForMenuItem(
+controls/menu/menu_item_view.h:135:      const base::string16& item_text,
+controls/menu/menu_item_view.h:136:      const base::string16& accelerator_text);
+controls/menu/menu_item_view.h:145:                              const base::string16& label,
+controls/menu/menu_item_view.h:146:                              const base::string16& sublabel,
+controls/menu/menu_item_view.h:147:                              const base::string16& minor_text,
+controls/menu/menu_item_view.h:165:                               const base::string16& label,
+controls/menu/menu_item_view.h:170:  MenuItemView* appendSubMenu(int item_id, const base::string16& label);
+controls/menu/menu_item_view.h:175:                                      const base::string16& label,
+controls/menu/menu_item_view.h:181:                                        const base::string16& label);
+controls/menu/menu_item_view.h:194:                                       const base::string16& label,
+controls/menu/menu_item_view.h:199:                                   const base::string16& label,
+controls/menu/menu_item_view.h:200:                                   const base::string16& sublabel,
+controls/menu/menu_item_view.h:201:                                   const base::string16& minor_text,
+controls/menu/menu_item_view.h:221:  void setTitle(const base::string16& title);
+controls/menu/menu_item_view.h:222:  const base::string16& title() const { return title_; }
+controls/menu/menu_item_view.h:225:  void setSubtitle(const base::string16& subtitle);
+controls/menu/menu_item_view.h:228:  void setMinorText(const base::string16& minor_text);
+controls/menu/menu_item_view.h:244:  void setTooltip(const base::string16& tooltip, int item_id);
+controls/menu/menu_item_view.h:292:  base::char16 getMnemonic();
+controls/menu/menu_item_view.h:402:  base::string16 getMinorText() const;
+controls/menu/menu_item_view.h:466:  base::string16 title_;
+controls/menu/menu_item_view.h:469:  base::string16 subtitle_;
+controls/menu/menu_item_view.h:472:  base::string16 minor_text_;
+controls/menu/menu_item_view.h:488:  base::string16 tooltip_;
+controls/menu/submenu_view.cc:312:base::string16 SubmenuView::getTextForRow(int row) {
+controls/menu/menu_item_view_unittest.cc:42:      root_menu.appendMenuItemWithLabel(1, base::ASCIIToUTF16("item 1"));
+controls/menu/menu_item_view_unittest.cc:46:      root_menu.appendMenuItemWithLabel(2, base::string16());
+controls/menu/menu_message_loop_tos.cc:157:  base::AutoReset<base::Closure> reset_quit_closure(&message_loop_quit_,
+controls/menu/menu_message_loop_tos.cc:158:                                                    base::Closure());
+controls/menu/menu_message_loop_tos.cc:171:    base::MessageLoopForUI* loop = base::MessageLoopForUI::current();
+controls/menu/menu_message_loop_tos.cc:172:    base::MessageLoop::ScopedNestableTaskAllower allow(loop);
+controls/menu/menu_message_loop_tos.cc:173:    base::RunLoop run_loop(&nested_dispatcher);
+controls/menu/menu_message_loop_tos.cc:197:    base::MessageLoopForUI* loop = base::MessageLoopForUI::current();
+controls/menu/menu_message_loop_tos.cc:198:    base::MessageLoop::ScopedNestableTaskAllower allow(loop);
+controls/menu/menu_message_loop_tos.cc:199:    base::RunLoop run_loop;
+controls/menu/menu_types.h:11:// position will be used if base::i18n:IsRTL() is true. The BUBBLE flags are
+controls/menu/menu_model_adapter_unittest.cc:44:  base::string16 getLabelAt(int index) const override {
+controls/menu/menu_model_adapter_unittest.cc:97:          label(base::ASCIIToUTF16(item_label)),
+controls/menu/menu_model_adapter_unittest.cc:101:    base::string16 label;
+controls/menu/menu_model_adapter_unittest.cc:180:    const MenuModelBase::Item& model_item = model.getItemDefinition(i);
+controls/menu/menu_model_adapter_unittest.cc:227:    const MenuModelBase::Item& model_item = submodel->getItemDefinition(i);
+controls/menu/menu_runner_impl.h:38:  base::TimeDelta getClosingEventTime() const override;
+controls/menu/menu_runner_impl.h:86:  base::TimeDelta closing_event_time_;
+controls/menu/menu_runner_impl.h:89:  base::WeakPtrFactory<MenuRunnerImpl> weak_factory_;
+controls/menu/menu_host.cc:100:  base::AutoReset<bool> reseter(&ignore_capture_lost_, true);
+controls/menu/menu_controller_unittest.cc:77:  base::MessagePumpDispatcher* dispatcher() {
+controls/menu/menu_controller_unittest.cc:82:  void prepareNestedLoopClosures(base::MessagePumpDispatcher* dispatcher,
+controls/menu/menu_controller_unittest.cc:83:                                 base::Closure* run_closure,
+controls/menu/menu_controller_unittest.cc:84:                                 base::Closure* quit_closure) override {
+controls/menu/menu_controller_unittest.cc:85:    scoped_ptr<base::RunLoop> run_loop(new base::RunLoop());
+controls/menu/menu_controller_unittest.cc:87:    *run_closure = base::Bind(&TestDispatcherClient::runNestedDispatcher,
+controls/menu/menu_controller_unittest.cc:88:                              base::Unretained(this),
+controls/menu/menu_controller_unittest.cc:89:                              base::Passed(&run_loop),
+controls/menu/menu_controller_unittest.cc:94:  void runNestedDispatcher(scoped_ptr<base::RunLoop> run_loop,
+controls/menu/menu_controller_unittest.cc:95:                           base::MessagePumpDispatcher* dispatcher) {
+controls/menu/menu_controller_unittest.cc:96:    base::AutoReset<base::MessagePumpDispatcher*> reset_dispatcher(&dispatcher_,
+controls/menu/menu_controller_unittest.cc:98:    base::MessageLoopForUI* loop = base::MessageLoopForUI::current();
+controls/menu/menu_controller_unittest.cc:99:    base::MessageLoop::ScopedNestableTaskAllower allow(loop);
+controls/menu/menu_controller_unittest.cc:103:  base::MessagePumpDispatcher* dispatcher_;
+controls/menu/menu_controller_unittest.cc:118:    base::MessageLoopForUI* loop = base::MessageLoopForUI::current();
+controls/menu/menu_controller_unittest.cc:119:    base::MessageLoop::ScopedNestableTaskAllower allow(loop);
+controls/menu/menu_controller_unittest.cc:124:      base::MessageLoop::current()->PostTask(
+controls/menu/menu_controller_unittest.cc:126:          base::Bind(&MenuControllerTest::step3_DispatchEvents,
+controls/menu/menu_controller_unittest.cc:127:                     base::Unretained(this),
+controls/menu/menu_controller_unittest.cc:137:    base::MessageLoopForUI* loop = base::MessageLoopForUI::current();
+controls/menu/menu_controller_unittest.cc:138:    base::MessageLoop::ScopedNestableTaskAllower allow(loop);
+controls/menu/menu_controller_unittest.cc:139:    base::MessageLoop::current()->PostTask(
+controls/menu/menu_controller_unittest.cc:141:        base::Bind(&MenuControllerTest::step3_DispatchEvents,
+controls/menu/menu_controller_unittest.cc:142:                   base::Unretained(this),
+controls/menu/menu_controller_unittest.cc:144:    run_loop_.reset(new base::RunLoop());
+controls/menu/menu_controller_unittest.cc:149:    base::MessageLoop::current()->PostTask(
+controls/menu/menu_controller_unittest.cc:151:        base::Bind(&MenuControllerTest::step2_RunNestedLoop,
+controls/menu/menu_controller_unittest.cc:152:                   base::Unretained(this)));
+controls/menu/menu_controller_unittest.cc:222:  scoped_ptr<base::RunLoop> run_loop_;
+controls/menu/menu_controller_unittest.cc:230:  base::MessageLoop::ScopedNestableTaskAllower allow_nested(
+controls/menu/menu_controller_unittest.cc:231:      base::MessageLoop::current());
+controls/menu/menu_controller_unittest.cc:234:      base::Bind(&MenuControllerTest::step1_RunMenu, base::Unretained(this)));
+controls/menu/menu_controller_unittest.cc:246:        base::Bind(&MenuControllerTest::dispatchEscapeAndExpect,
+controls/menu/menu_controller_unittest.cc:247:                   base::Unretained(this),
+controls/menu/menu_controller_unittest.cc:261:        base::Bind(&MenuControllerTest::dispatchEscapeAndExpect,
+controls/menu/menu_controller_unittest.cc:262:                   base::Unretained(this),
+controls/menu/menu_runner_impl.cc:40:      closing_event_time_(base::TimeDelta()),
+controls/menu/menu_runner_impl.cc:79:  closing_event_time_ = base::TimeDelta();
+controls/menu/menu_runner_impl.cc:90:        if (controller->active_menu_thread_id() == base::GetThreadID()) {
+controls/menu/menu_runner_impl.cc:93:          const base::Closure base_closure = base::Bind(
+controls/menu/menu_runner_impl.cc:94:              &views::MenuController::CancelAll, base::Unretained(controller));
+controls/menu/menu_runner_impl.cc:103:      if (controller->active_menu_thread_id() == base::GetThreadID()) {
+controls/menu/menu_runner_impl.cc:107:        const base::Closure base_closure = base::Bind(
+controls/menu/menu_runner_impl.cc:108:            &views::MenuController::CancelAll, base::Unretained(controller));
+controls/menu/menu_runner_impl.cc:161:base::TimeDelta MenuRunnerImpl::getClosingEventTime() const {
+controls/menu/menu_runner_impl.cc:220:    base::WeakPtr<MenuRunnerImpl> ref(weak_factory_.getWeakPtr());
+controls/menu/menu_runner_impl.cc:240:    show_mnemonics = base::win::IsAltPressed();
+controls/menu/submenu_view.h:87:  base::string16 getTextForRow(int row) override;
+controls/slide_out_view.cc:28:      base::TimeDelta::FromMilliseconds(kSwipeRestoreDurationMS));
+controls/slide_out_view.cc:38:      base::TimeDelta::FromMilliseconds(swipe_out_duration));
+controls/updown/updown_views.h:79:  void contentsChanged(Textfield* sender, const base::string16& new_contents) override;
+controls/updown/updown_views.h:110:  void setText(const base::string16& text) {
+controls/updown/updown_views.cc:19:    : LabelButton(listener, base::UTF8ToUTF16("")), type_(type) {
+controls/updown/updown_views.cc:32:      //      setText(base::UTF8ToUTF16("△"));
+controls/updown/updown_views.cc:44:      //      setText(base::UTF8ToUTF16("▽"));
+controls/updown/updown_views.cc:56:      setText(base::UTF8ToUTF16("◁"));
+controls/updown/updown_views.cc:59:      setText(base::UTF8ToUTF16("▷"));
+controls/updown/updown_views.cc:62:      setText(base::UTF8ToUTF16("?"));
+controls/updown/updown_views.cc:102:    textfield_->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:119:  //	textfield_->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:125:                                  const base::string16& new_contents) {
+controls/updown/updown_views.cc:138:        base::StringToDouble(base::UTF16ToUTF8(new_contents), &value);
+controls/updown/updown_views.cc:156:      textfield_->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:167:            base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:184:    sender->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:206:      textfield_->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:218:  if (base::StringToDouble(base::UTF16ToUTF8(textfield_->text()), &cur_val)) {
+controls/updown/updown_views.cc:244:      textfield_->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:250:      textfield_->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/updown/updown_views.cc:271:    textfield_->setText(base::UTF8ToUTF16(base::DoubleToString(cur_value_)));
+controls/scrollbar/base_scroll_bar_thumb.cc:111:    if (base::i18n::IsRTL())
+controls/scrollbar/base_scroll_bar.cc:48:          base::Bind(&BaseScrollBar::trackClicked, base::Unretained(this))),
+controls/scrollbar/base_scroll_bar.cc:263:base::string16 BaseScrollBar::getLabel(int id) const {
+controls/scrollbar/base_scroll_bar.cc:295:  return ids_value ? l10n_util::GetStringUTF16(ids_value) : base::string16();
+controls/scrollbar/base_scroll_bar.h:96:  base::string16 getLabel(int id) const override;
+controls/scrollbar/bitmap_scroll_bar.cc:54:            base::Bind(const base::string16& AutorepeatButton::notifyClick,
+controls/scrollbar/bitmap_scroll_bar.cc:55:                       base::Unretained(this))) {}
+controls/scrollbar/scrollbar_unittest.cc:53:    ViewsTestBase::setUp();
+controls/scrollbar/scrollbar_unittest.cc:79:    ViewsTestBase::tearDown();
+controls/scrollbar/base_scroll_bar_button.cc:15:      repeater_(base::Bind(&BaseScrollBarButton::repeaterNotifyClick,
+controls/scrollbar/base_scroll_bar_button.cc:16:                           base::Unretained(this))) {}
+controls/progress_bar_unittest.cc:15:  base::string16 tooltip = base::ASCIIToUTF16("Some text");
+controls/progress_bar_unittest.cc:17:  EXPECT_EQ(base::string16(), tooltip);
+controls/progress_bar_unittest.cc:18:  base::string16 tooltip_text = base::ASCIIToUTF16("My progress");
+controls/progress_bar_unittest.cc:31:  EXPECT_EQ(base::string16(), state.name);
+controls/styled_label.h:51:    base::string16 tooltip;
+controls/styled_label.h:61:  StyledLabel(const base::string16& text, StyledLabelListener* listener);
+controls/styled_label.h:64:  const base::string16& text() const { return text_; }
+controls/styled_label.h:66:  void setText(const base::string16& text);
+controls/styled_label.h:117:  base::string16 text_;
+controls/slider.cc:148:  if (old_value_valid && base::MessageLoop::current()) {
+controls/slider.cc:176:      (base::i18n::IsRTL() ? width() - (point.x() - inset.left())
+controls/slider.cc:199:          base::i18n::IsRTL()
+controls/slider.cc:209:          base::i18n::IsRTL()
+controls/slider.cc:220:          base::i18n::IsRTL()
+controls/slider.cc:231:          base::i18n::IsRTL()
+controls/slider.cc:280:void Slider::setAccessibleName(const base::string16& name) {
+controls/slider.cc:530://   state->value = base::UTF8ToUTF16(
+controls/slider.cc:531://       base::StringPrintf("%d%%", static_cast<int>(value_ * 100 + 0.5)));
+controls/slider.cc:546:                            base::string16* tooltip) const {
+controls/slider.cc:547:  base::string16 text = this->makeTooltipText();
+controls/slider.cc:564:base::string16 Slider::makeTooltipText() const {
+controls/slider.cc:571:  return base::UTF8ToUTF16(pct);
+controls/slider_unittest.cc:166:  views::ViewsTestBase::setUp();
+controls/slider_unittest.cc:193:  base::i18n::SetICUDefaultLocale(default_locale_);
+controls/slider_unittest.cc:195:  views::ViewsTestBase::tearDown();
+controls/slider_unittest.cc:249:  base::i18n::SetICUDefaultLocale("he");
+controls/slider_unittest.cc:282:      base::TimeDelta::FromMilliseconds(10), 5 /* steps */);
+controls/slider_unittest.cc:289:      base::TimeDelta::FromMilliseconds(10), 5 /* steps */);
+controls/slider_unittest.cc:297:      base::TimeDelta::FromMilliseconds(10), 5 /* steps */);
+controls/slider_unittest.cc:321:      base::TimeDelta::FromMilliseconds(0), 5 /* steps */);
+controls/prefix_selector.h:31:  void insertText(const base::string16& text) override;
+controls/prefix_selector.h:32:  void onCharInserted(base::char16 ch, int flags) override;
+controls/prefix_selector.h:47:                        base::string16* text) const override;
+controls/prefix_selector.h:50:      base::i18n::TextDirection direction) override;
+controls/prefix_selector.h:62:  void onTextInput(const base::string16& text);
+controls/prefix_selector.h:65:  bool textAtRowMatchesText(int row, const base::string16& lower_text);
+controls/prefix_selector.h:73:  base::TimeTicks time_of_last_key_;
+controls/prefix_selector.h:75:  base::string16 current_text_;
+controls/native_control.cc:329:  if (base::i18n::IsRTL())
+controls/native_control.cc:340:  if (base::i18n::IsRTL())
+controls/link.h:28:  explicit Link(const base::string16& title);
+controls/link.h:52:  void setText(const base::string16& text) override;
+controls/resize_area.cc:78:  delegate_->onResize(base::i18n::IsRTL() ? -resize_amount : resize_amount,
+controls/prefix_selector.cc:45:void PrefixSelector::insertText(const base::string16& text) {
+controls/prefix_selector.cc:49:void PrefixSelector::onCharInserted(base::char16 ch, int flags) {
+controls/prefix_selector.cc:50:  onTextInput(base::string16(1, ch));
+controls/prefix_selector.cc:113:                                      base::string16* text) const {
+controls/prefix_selector.cc:122:    base::i18n::TextDirection direction) {
+controls/prefix_selector.cc:142:void PrefixSelector::onTextInput(const base::string16& text) {
+controls/prefix_selector.cc:159:  const base::TimeTicks now(base::TimeTicks::Now());
+controls/prefix_selector.cc:170:  const base::string16 lower_text(base::i18n::ToLower(current_text_));
+controls/prefix_selector.cc:181:                                          const base::string16& lower_text) {
+controls/prefix_selector.cc:182:  const base::string16 model_text(
+controls/prefix_selector.cc:183:      base::i18n::ToLower(prefix_delegate_->getTextForRow(row)));
+controls/prefix_selector.cc:190:  time_of_last_key_ = base::TimeTicks();
+controls/image_view.h:71:  void setTooltipText(const base::string16& tooltip);
+controls/image_view.h:72:  void setTooltipTextWithIcon(const base::string16& tooltip,
+controls/image_view.h:74:  base::string16 getTooltipText() const;
+controls/image_view.h:89:                      base::string16* tooltip) const override;
+controls/image_view.h:91:                              base::string16* tooltip,
+controls/image_view.h:124:  base::string16 tooltip_text_;
+controls/image_view.cc:124:  if (base::i18n::IsRTL() && (horiz_alignment_ != CENTER))
+controls/image_view.cc:208:void ImageView::setTooltipText(const base::string16& tooltip) {
+controls/image_view.cc:212:void ImageView::setTooltipTextWithIcon(const base::string16& tooltip,
+controls/image_view.cc:218:base::string16 ImageView::getTooltipText() const {
+controls/image_view.cc:227:                               base::string16* tooltip) const {
+controls/image_view.cc:236:                                       base::string16* tooltip,
+controls/statusbar/statusbar.h:30:	void setText(int index, const base::string16& text, const gfx::Rect& bounds);
+controls/statusbar/statusbar.cc:69:  void Statusbar::setText(int index, const base::string16& text, const gfx::Rect& bounds) {
+controls/link.cc:26:Link::Link() : Label(base::string16()) {
+controls/link.cc:30:Link::Link(const base::string16& title) : Label(title) {
+controls/link.cc:137:void Link::setText(const base::string16& text) {
+controls/combobox/combobox_listener.h:30:  virtual void textChanged(Combobox* combobox, const base::string16& new_contents) {}
+controls/combobox/combobox.cc:434:void Combobox::setText(base::string16 text) {
+controls/combobox/combobox.cc:495:base::string16 Combobox::selected_text() const {
+controls/combobox/combobox.cc:499:base::string16 Combobox::text() const {
+controls/combobox/combobox.cc:501:    return base::string16();
+controls/combobox/combobox.cc:502:  return textfield_ ? textfield_->text() : base::string16();
+controls/combobox/combobox.cc:505:bool Combobox::selectValue(const base::string16& value) {
+controls/combobox/combobox.cc:518:void Combobox::setAccessibleName(const base::string16& name) {
+controls/combobox/combobox.cc:521:void Combobox::setTooltipText(const base::string16& tooltip_text) {
+controls/combobox/combobox.cc:528:                              base::string16* tooltip) const {
+controls/combobox/combobox.cc:633:base::string16 Combobox::getTooltipText(int id,
+controls/combobox/combobox.cc:635:  return base::string16();
+controls/combobox/combobox.cc:652:base::string16 Combobox::getTextForRow(int row) {
+controls/combobox/combobox.cc:653:  return model()->isItemSeparatorAt(row) ? base::string16()
+controls/combobox/combobox.cc:892:  base::TimeDelta delta = base::TimeTicks::Now() - menu_closed_time_;
+controls/combobox/combobox.cc:932:  base::TimeDelta delta = base::TimeTicks::Now() - menu_closed_time_;
+controls/combobox/combobox.cc:938:                               const base::string16& new_contents) {
+controls/combobox/combobox.cc:986:          i + kFirstMenuItemId, base::UTF8ToUTF16(""), MenuItemView::NORMAL);
+controls/combobox/combobox.cc:992:      base::string16 text = model()->getLabelAt(i);
+controls/combobox/combobox.cc:996:      base::i18n::AdjustStringForLocaleDirection(&text);
+controls/combobox/combobox.cc:1074:  menu_closed_time_ = base::TimeTicks::Now();
+controls/combobox/combobox.cc:1098:  base::WeakPtr<Combobox> weak_ptr = weak_ptr_factory_.getWeakPtr();
+controls/combobox/combobox.h:99:  void setText(base::string16 text);
+controls/combobox/combobox.h:119:  virtual base::string16 selected_text() const;
+controls/combobox/combobox.h:121:  virtual base::string16 text() const;
+controls/combobox/combobox.h:125:  bool selectValue(const base::string16& value);
+controls/combobox/combobox.h:130:  void setAccessibleName(const base::string16& name);
+controls/combobox/combobox.h:131:  void setTooltipText(const base::string16& tooltip_text);
+controls/combobox/combobox.h:133:                      base::string16* tooltip) const override;
+controls/combobox/combobox.h:180:  base::string16 getTooltipText(int id,
+controls/combobox/combobox.h:188:  base::string16 getTextForRow(int row) override;
+controls/combobox/combobox.h:198:                               const base::string16& new_contents) override;
+controls/combobox/combobox.h:269:  base::TimeTicks getClosedTime() { return menu_closed_time_; }
+controls/combobox/combobox.h:331:  base::string16 tooltip_text_;
+controls/combobox/combobox.h:332:  base::string16 accessible_name_;
+controls/combobox/combobox.h:353:  base::TimeTicks menu_closed_time_;
+controls/combobox/combobox.h:406:  base::WeakPtrFactory<Combobox> weak_ptr_factory_;
+controls/throbber.cc:14:using base::Time;
+controls/throbber.cc:15:using base::TimeDelta;
+controls/message_box_view.cc:44:bool IsParagraphSeparator(base::char16 c) {
+controls/message_box_view.cc:52:void SplitStringIntoParagraphs(const base::string16& text,
+controls/message_box_view.cc:53:                               std::vector<base::string16>* paragraphs) {
+controls/message_box_view.cc:73:MessageBoxView::InitParams::InitParams(const base::string16& message)
+controls/message_box_view.cc:91:base::string16 MessageBoxView::getInputText() {
+controls/message_box_view.cc:92:  return prompt_field_ ? prompt_field_->text() : base::string16();
+controls/message_box_view.cc:99:void MessageBoxView::setCheckBoxLabel(const base::string16& label) {
+controls/message_box_view.cc:113:void MessageBoxView::setLink(const base::string16& text,
+controls/message_box_view.cc:160:  base::string16 text = message_labels_[0]->text();
+controls/message_box_view.cc:204:  prompt_label_->setTooltipText(base::string16());
+controls/message_box_view.cc:214:  message_label_->setTooltipText(base::string16());
+controls/message_box_view.cc:220:  default_icon_label_ = new Label(base::UTF8ToUTF16("디폴트 아이콘"));
+controls/message_box_view.cc:222:  default_icon_label_->setTooltipText(base::string16());
+controls/message_box_view.cc:231:  ok_button_ = new LabelButton(this, base::UTF8ToUTF16("확인"));
+controls/message_box_view.cc:235:  cancel_button_ = new LabelButton(this, base::UTF8ToUTF16("취소"));
+controls/message_box_view.cc:322:    std::vector<base::string16> texts;
+controls/message_box_view.h:46:    explicit InitParams(const base::string16& message);
+controls/message_box_view.h:50:    base::string16 message;
+controls/message_box_view.h:51:    base::string16 default_prompt;
+controls/message_box_view.h:64:  base::string16 getInputText();
+controls/message_box_view.h:73:  void setCheckBoxLabel(const base::string16& label);
+controls/message_box_view.h:80:  void setLink(const base::string16& text, LinkListener* listener);
+controls/textfield/textfield_controller.h:32:                               const base::string16& new_contents) {}
+controls/textfield/textfield_model.cc:71:       const base::string16& old_text,
+controls/textfield/textfield_model.cc:75:       const base::string16& new_text,
+controls/textfield/textfield_model.cc:110:    base::string16 old_text = edit->old_text_;
+controls/textfield/textfield_model.cc:131:  base::string16 old_text_;
+controls/textfield/textfield_model.cc:139:  base::string16 new_text_;
+controls/textfield/textfield_model.cc:148:  InsertEdit(bool mergeable, const base::string16& new_text, size_t at)
+controls/textfield/textfield_model.cc:152:             base::string16(),
+controls/textfield/textfield_model.cc:175:              const base::string16& old_text,
+controls/textfield/textfield_model.cc:180:              const base::string16& new_text,
+controls/textfield/textfield_model.cc:208:             const base::string16& text,
+controls/textfield/textfield_model.cc:218:             base::string16(),
+controls/textfield/textfield_model.cc:286:bool TextfieldModel::setText(const base::string16& new_text) {
+controls/textfield/textfield_model.cc:313:void TextfieldModel::onCharInserted(base::char16 c) {
+controls/textfield/textfield_model.cc:315:    insertTextInternal(base::string16(&c, 1), false);
+controls/textfield/textfield_model.cc:317:    insertTextInternal(base::string16(&c, 1), true);
+controls/textfield/textfield_model.cc:320:void TextfieldModel::append(const base::string16& new_text) {
+controls/textfield/textfield_model.cc:411:base::string16 TextfieldModel::getSelectedText() const {
+controls/textfield/textfield_model.cc:466:  base::string16 old = text();
+controls/textfield/textfield_model.cc:489:  base::string16 old = text();
+controls/textfield/textfield_model.cc:522:  base::string16 result;
+controls/textfield/textfield_model.cc:527:  base::string16 actual_text = base::CollapseWhitespace(result, false);
+controls/textfield/textfield_model.cc:543:    const base::string16& new_text,
+controls/textfield/textfield_model.cc:551:base::string16 TextfieldModel::getTextFromRange(const gfx::Range& range) const {
+controls/textfield/textfield_model.cc:554:  return base::string16();
+controls/textfield/textfield_model.cc:575:  base::string16 new_text = text();
+controls/textfield/textfield_model.cc:616:  base::string16 composition =
+controls/textfield/textfield_model.cc:633:  base::string16 new_text = text();
+controls/textfield/textfield_model.cc:666:void TextfieldModel::insertTextInternal(const base::string16& new_text,
+controls/textfield/textfield_model.cc:679:void TextfieldModel::replaceTextInternal(const base::string16& new_text,
+controls/textfield/textfield_model.cc:714:  const base::string16 old_text = text().substr(old_text_start, range.length());
+controls/textfield/textfield_model.cc:725:    const base::string16& new_text) {
+controls/textfield/textfield_model.cc:730:    const_cast<base::string16&>(new_text).erase(
+controls/textfield/textfield_model.cc:744:                                             const base::string16& new_text,
+controls/textfield/textfield_model.cc:757:void TextfieldModel::executeAndRecordInsert(const base::string16& new_text,
+controls/textfield/textfield_model.cc:761:    const_cast<base::string16&>(new_text).erase(length_limit() - text().size(),
+controls/textfield/textfield_model.cc:794:                                const base::string16& new_text,
+controls/textfield/textfield_model.cc:798:  base::string16 old_text = text();
+controls/textfield/textfield.cc:309:void Textfield::setText(const base::string16& new_text) {
+controls/textfield/textfield.cc:317:void Textfield::appendText(const base::string16& new_text) {
+controls/textfield/textfield.cc:325:void Textfield::insertOrReplaceText(const base::string16& new_text) {
+controls/textfield/textfield.cc:333:base::i18n::TextDirection Textfield::getTextDirection() const {
+controls/textfield/textfield.cc:337:base::string16 Textfield::getSelectedText() const {
+controls/textfield/textfield.cc:472:base::string16 Textfield::getPlaceholderText() const {
+controls/textfield/textfield.cc:539:void Textfield::setAccessibleName(const base::string16& name) {
+controls/textfield/textfield.cc:627:        //   ui::CLIPBOARD_TYPE_SELECTION).WriteText(base::string16());
+controls/textfield/textfield.cc:671:        FROM_HERE, base::TimeDelta::FromMilliseconds(GetDragSelectionDelay()),
+controls/textfield/textfield.cc:727:  base::WeakPtr<Textfield> textfield(weak_ptr_factory_.getWeakPtr());
+controls/textfield/textfield.cc:739:    const bool rtl = getTextDirection() == base::i18n::RIGHT_TO_LEFT;
+controls/textfield/textfield.cc:832:  base::string16 new_text;
+controls/textfield/textfield.cc:882://     state->set_value_callback = base::Bind(&Textfield::accessibilitySetValue,
+controls/textfield/textfield.cc:949:        FROM_HERE, base::TimeDelta::FromMilliseconds(caret_blink_ms), this,
+controls/textfield/textfield.cc:1019:  const base::string16& selected_text(getSelectedText());
+controls/textfield/textfield.cc:1075:  base::string16 result;
+controls/textfield/textfield.cc:1130:  bool rtl = getTextDirection() == base::i18n::RIGHT_TO_LEFT;
+controls/textfield/textfield.cc:1251:  base::string16 old_text(text());
+controls/textfield/textfield.cc:1277:void Textfield::insertText(const base::string16& new_text) {
+controls/textfield/textfield.cc:1293:void Textfield::onCharInserted(base::char16 ch, int flags) {
+controls/textfield/textfield.cc:1313:  base::string16 old_text(text());
+controls/textfield/textfield.cc:1329:      password_reveal_duration_ != base::TimeDelta()) {
+controls/textfield/textfield.cc:1435:                                 base::string16* range_text) const {
+controls/textfield/textfield.cc:1450:    base::i18n::TextDirection direction) {
+controls/textfield/textfield.cc:1454:  const gfx::DirectionalityMode mode = direction == base::i18n::RIGHT_TO_LEFT
+controls/textfield/textfield.cc:1522:base::string16 Textfield::getSelectionClipboardText() const {
+controls/textfield/textfield.cc:1523:  base::string16 selection_clipboard_text;
+controls/textfield/textfield.cc:1558:void Textfield::accessibilitySetValue(const base::string16& new_value) {
+controls/textfield/textfield.cc:1674:    base::string16 result;
+controls/textfield/textfield.cc:1705:    if (base::getSystemLang().compare("ko_KR.UTF-8") == 0) {
+controls/textfield/textfield.cc:1755:    base::TimeDelta time_delta = event.time_stamp() - last_click_time_;
+controls/textfield/textfield.cc:1783:        base::Bind(&Textfield::revealPasswordChar,
+controls/textfield/textfield.cc:1802:  base::string16 selection_clipboard_text = getSelectionClipboardText();
+controls/textfield/textfield.h:77:  const base::string16& text() const { return model_->text(); }
+controls/textfield/textfield.h:83:  void setText(const base::string16& new_text);
+controls/textfield/textfield.h:86:  void appendText(const base::string16& new_text);
+controls/textfield/textfield.h:89:  void insertOrReplaceText(const base::string16& new_text);
+controls/textfield/textfield.h:92:  base::i18n::TextDirection getTextDirection() const;
+controls/textfield/textfield.h:95:  base::string16 getSelectedText() const;
+controls/textfield/textfield.h:155:  void set_placeholder_text(const base::string16& text) {
+controls/textfield/textfield.h:158:  virtual base::string16 getPlaceholderText() const;
+controls/textfield/textfield.h:213:  void setAccessibleName(const base::string16& name);
+controls/textfield/textfield.h:304:  void insertText(const base::string16& text) override;
+controls/textfield/textfield.h:305:  void onCharInserted(base::char16 ch, int flags) override;
+controls/textfield/textfield.h:320:                        base::string16* text) const override;
+controls/textfield/textfield.h:323:      base::i18n::TextDirection direction) override;
+controls/textfield/textfield.h:353:  virtual base::string16 getSelectionClipboardText() const;
+controls/textfield/textfield.h:363:  void accessibilitySetValue(const base::string16& new_value);
+controls/textfield/textfield.h:448:  base::string16 placeholder_text_;
+controls/textfield/textfield.h:457:  base::string16 accessible_name_;
+controls/textfield/textfield.h:463:  base::TimeDelta password_reveal_duration_;
+controls/textfield/textfield.h:464:  base::OneShotTimer<Textfield> password_reveal_timer_;
+controls/textfield/textfield.h:474:  base::RepeatingTimer<Textfield> cursor_repaint_timer_;
+controls/textfield/textfield.h:485:  base::RepeatingTimer<Textfield> drag_selection_timer_;
+controls/textfield/textfield.h:490:  base::TimeDelta last_click_time_;
+controls/textfield/textfield.h:508:  base::WeakPtrFactory<Textfield> weak_ptr_factory_;
+controls/textfield/textfield_model_unittest.cc:26:#define EXPECT_STR_EQ(ascii, utf16) EXPECT_EQ(base::ASCIIToUTF16(ascii), utf16)
+controls/textfield/textfield_model_unittest.cc:57:    model->setText(base::string16());
+controls/textfield/textfield_model_unittest.cc:70:  model.append(base::ASCIIToUTF16("HILL"));
+controls/textfield/textfield_model_unittest.cc:72:  model.append(base::ASCIIToUTF16("WORLD"));
+controls/textfield/textfield_model_unittest.cc:105:  model.replaceText(base::ASCIIToUTF16(" WOR"));
+controls/textfield/textfield_model_unittest.cc:112:  model.append(base::WideToUTF16(L"\x05d0\x05d1\x05d2"));
+controls/textfield/textfield_model_unittest.cc:113:  EXPECT_EQ(base::WideToUTF16(L"\x05d0\x05d1\x05d2"), model.text());
+controls/textfield/textfield_model_unittest.cc:114:  model.append(base::WideToUTF16(L"\x05e0\x05e1\x05e2"));
+controls/textfield/textfield_model_unittest.cc:115:  EXPECT_EQ(base::WideToUTF16(L"\x05d0\x05d1\x05d2\x05e0\x05e1\x05e2"),
+controls/textfield/textfield_model_unittest.cc:121:  EXPECT_EQ(base::WideToUTF16(L"\x05d0\x05f0\x05d1\x05d2\x05e0\x05e1\x05e2"),
+controls/textfield/textfield_model_unittest.cc:126:  EXPECT_EQ(base::WideToUTF16(L"\x05d0\x05f0\x5f1\x05d2\x05e0\x05e1\x05e2"),
+controls/textfield/textfield_model_unittest.cc:132:  EXPECT_EQ(base::WideToUTF16(L"\x05d0\x05f0\x5f1\x05e0\x05e1\x05e2"),
+controls/textfield/textfield_model_unittest.cc:136:  EXPECT_EQ(base::WideToUTF16(L"\x05d0\x05f0\x05e0\x05e1\x05e2"), model.text());
+controls/textfield/textfield_model_unittest.cc:143:  on_windows_xp = base::win::GetVersion() < base::win::VERSION_VISTA;
+controls/textfield/textfield_model_unittest.cc:149:  model.append(base::WideToUTF16(L"\x0915\x093f\x0915\x094d\x0915"));
+controls/textfield/textfield_model_unittest.cc:150:  EXPECT_EQ(base::WideToUTF16(L"\x0915\x093f\x0915\x094d\x0915"), model.text());
+controls/textfield/textfield_model_unittest.cc:151:  model.append(base::WideToUTF16(L"\x0915\x094d\x092e\x094d"));
+controls/textfield/textfield_model_unittest.cc:152:  EXPECT_EQ(base::WideToUTF16(
+controls/textfield/textfield_model_unittest.cc:165:        base::WideToUTF16(
+controls/textfield/textfield_model_unittest.cc:175:    EXPECT_EQ(base::WideToUTF16(
+controls/textfield/textfield_model_unittest.cc:189:  EXPECT_EQ(base::WideToUTF16(L"\x0061\x0062\x0915\x0915\x094d\x092e\x094d"),
+controls/textfield/textfield_model_unittest.cc:194:  EXPECT_EQ(base::WideToUTF16(L"\x0061\x0062\x0915\x0915\x094d\x092e"),
+controls/textfield/textfield_model_unittest.cc:199:  model.setText(base::WideToUTF16(L"\x0D38\x0D4D\x0D15\x0D16\x0D2E"));
+controls/textfield/textfield_model_unittest.cc:216:  EXPECT_EQ(base::WideToUTF16(L"\x0D38\x0D15\x0D16\x0D2E"), model.text());
+controls/textfield/textfield_model_unittest.cc:220:      base::WideToUTF16(L"\x05d5\x05b7\x05D9\x05B0\x05D4\x05B4\x05D9"));
+controls/textfield/textfield_model_unittest.cc:226:  EXPECT_EQ(base::WideToUTF16(L""), model.text());
+controls/textfield/textfield_model_unittest.cc:230:      base::WideToUTF16(L"\x002C\x0020\x05D1\x05BC\x05B7\x05E9\x05BC"));
+controls/textfield/textfield_model_unittest.cc:233:  EXPECT_EQ(base::WideToUTF16(L"\x002C\x0020\x05D1\x05BC\x05B7\x05E9"),
+controls/textfield/textfield_model_unittest.cc:239:  EXPECT_EQ(base::string16(), model.text());
+controls/textfield/textfield_model_unittest.cc:240:  EXPECT_EQ(base::string16(), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:247:  EXPECT_EQ(base::string16(), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:255:  model.append(base::ASCIIToUTF16("HELLO"));
+controls/textfield/textfield_model_unittest.cc:267:  EXPECT_EQ(base::string16(), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:309:      base::WideToUTF16(L"abc\x05E9\x05BC\x05C1\x05B8\x05E0\x05B8"
+controls/textfield/textfield_model_unittest.cc:316:  EXPECT_EQ(base::WideToUTF16(L"c"), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:320:  EXPECT_EQ(base::WideToUTF16(L"c\x05E9\x05BC\x05C1\x05B8"),
+controls/textfield/textfield_model_unittest.cc:325:  EXPECT_EQ(base::WideToUTF16(L"c"), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:329:  EXPECT_EQ(base::WideToUTF16(L"c\x05E9\x05BC\x05C1\x05B8\x05E0\x05B8"
+controls/textfield/textfield_model_unittest.cc:334:  EXPECT_EQ(base::string16(), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:336:  EXPECT_EQ(base::WideToUTF16(L"abc\x05E9\x05BC\x05C1\x05B8\x05E0\x05B8"
+controls/textfield/textfield_model_unittest.cc:344:      base::WideToUTF16(L"a\x05E9"
+controls/textfield/textfield_model_unittest.cc:348:  EXPECT_EQ(base::WideToUTF16(L"a"), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:351:  EXPECT_EQ(base::WideToUTF16(L"a"), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:354:  EXPECT_EQ(base::WideToUTF16(L"a\x05E9"
+controls/textfield/textfield_model_unittest.cc:361:  EXPECT_EQ(base::WideToUTF16(L"b"), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:364:  EXPECT_EQ(base::WideToUTF16(L"b"), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:367:  EXPECT_EQ(base::WideToUTF16(L"a\x05E9"
+controls/textfield/textfield_model_unittest.cc:375:  EXPECT_EQ(base::WideToUTF16(L"a\x05E9"), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:381:  EXPECT_EQ(base::WideToUTF16(L"\x05E9"
+controls/textfield/textfield_model_unittest.cc:386:  EXPECT_EQ(base::string16(), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:388:  EXPECT_EQ(base::WideToUTF16(L"a\x05E9"
+controls/textfield/textfield_model_unittest.cc:395:  model.append(base::ASCIIToUTF16("HELLO"));
+controls/textfield/textfield_model_unittest.cc:402:  model.append(base::ASCIIToUTF16("ILL"));
+controls/textfield/textfield_model_unittest.cc:425:      base::ASCIIToUTF16("The answer to Life, the Universe, and Everything"));
+controls/textfield/textfield_model_unittest.cc:465:  EXPECT_EQ(base::string16(), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:471:  model.append(base::ASCIIToUTF16("HELLO"));
+controls/textfield/textfield_model_unittest.cc:473:  model.setText(base::ASCIIToUTF16("GOODBYE"));
+controls/textfield/textfield_model_unittest.cc:482:  model.setText(base::ASCIIToUTF16("BYE"));
+controls/textfield/textfield_model_unittest.cc:485:  EXPECT_EQ(base::string16(), model.getSelectedText());
+controls/textfield/textfield_model_unittest.cc:486:  model.setText(base::string16());
+controls/textfield/textfield_model_unittest.cc:492:  const base::string16 initial_clipboard_text =
+controls/textfield/textfield_model_unittest.cc:493:      base::ASCIIToUTF16("initial text");
+controls/textfield/textfield_model_unittest.cc:497:  base::string16 clipboard_text;
+controls/textfield/textfield_model_unittest.cc:499:  model.append(base::ASCIIToUTF16("HELLO WORLD"));
+controls/textfield/textfield_model_unittest.cc:564:    const base::string16& expected_selected_string,
+controls/textfield/textfield_model_unittest.cc:572:  model.append(base::ASCIIToUTF16("  HELLO  !!  WO     RLD "));
+controls/textfield/textfield_model_unittest.cc:577:  SelectWordTestVerifier(model, base::ASCIIToUTF16("  "), 2U);
+controls/textfield/textfield_model_unittest.cc:582:  SelectWordTestVerifier(model, base::ASCIIToUTF16("HELLO"), 7U);
+controls/textfield/textfield_model_unittest.cc:587:  SelectWordTestVerifier(model, base::ASCIIToUTF16("     "), 20U);
+controls/textfield/textfield_model_unittest.cc:593:    SelectWordTestVerifier(model, base::ASCIIToUTF16("  !!  "), 13U);
+controls/textfield/textfield_model_unittest.cc:599:  SelectWordTestVerifier(model, base::ASCIIToUTF16("     "), 20U);
+controls/textfield/textfield_model_unittest.cc:604:  SelectWordTestVerifier(model, base::ASCIIToUTF16(" "), 24U);
+controls/textfield/textfield_model_unittest.cc:630:      base::WideToUTF16(L"a\x05d0 \x05d1\x05d2 \x0915\x094d\x0915 "
+controls/textfield/textfield_model_unittest.cc:637:    SelectWordTestVerifier(model, base::WideToUTF16(word_and_cursor[i].word),
+controls/textfield/textfield_model_unittest.cc:645:  model.append(base::ASCIIToUTF16("HELLO WORLD"));
+controls/textfield/textfield_model_unittest.cc:709:  model.append(base::ASCIIToUTF16("HELLO WORLD"));
+controls/textfield/textfield_model_unittest.cc:753:  model.append(base::ASCIIToUTF16("HELLO WORLD"));
+controls/textfield/textfield_model_unittest.cc:795:  model.append(base::ASCIIToUTF16("HELLO WORLD"));
+controls/textfield/textfield_model_unittest.cc:828:  model.append(base::ASCIIToUTF16("1234590"));
+controls/textfield/textfield_model_unittest.cc:838:  composition.text = base::ASCIIToUTF16("678");
+controls/textfield/textfield_model_unittest.cc:881:  EXPECT_TRUE(model.setText(base::ASCIIToUTF16("1234567890")));
+controls/textfield/textfield_model_unittest.cc:889:  model.insertText(base::UTF8ToUTF16("-"));
+controls/textfield/textfield_model_unittest.cc:901:  model.replaceText(base::UTF8ToUTF16("-"));
+controls/textfield/textfield_model_unittest.cc:909:  model.append(base::UTF8ToUTF16("-"));
+controls/textfield/textfield_model_unittest.cc:926:  model.setText(base::string16());
+controls/textfield/textfield_model_unittest.cc:947:  model.setText(base::string16());
+controls/textfield/textfield_model_unittest.cc:1070:  model.setText(base::ASCIIToUTF16("ABCDE"));
+controls/textfield/textfield_model_unittest.cc:1105:  model.setText(base::ASCIIToUTF16("www.google.com"));
+controls/textfield/textfield_model_unittest.cc:1111:  model.setText(base::ASCIIToUTF16("www.google.com"));
+controls/textfield/textfield_model_unittest.cc:1115:  model.setText(base::ASCIIToUTF16("www.google.com"));
+controls/textfield/textfield_model_unittest.cc:1119:  model.setText(base::ASCIIToUTF16("www.google.com"));
+controls/textfield/textfield_model_unittest.cc:1123:  model.setText(base::ASCIIToUTF16("www.youtube.com"));
+controls/textfield/textfield_model_unittest.cc:1167:  model.setText(base::ASCIIToUTF16("www.google.com"));
+controls/textfield/textfield_model_unittest.cc:1170:  model.setText(base::ASCIIToUTF16("www.google.com"));  // Confirm the text.
+controls/textfield/textfield_model_unittest.cc:1177:  model.setText(base::ASCIIToUTF16("www.google.com/search=www.google.c"));
+controls/textfield/textfield_model_unittest.cc:1187:  model.setText(base::ASCIIToUTF16("ABCDE"));
+controls/textfield/textfield_model_unittest.cc:1273:  model.setText(base::ASCIIToUTF16("12345"));
+controls/textfield/textfield_model_unittest.cc:1392:    model.setText(base::ASCIIToUTF16("abcd"));
+controls/textfield/textfield_model_unittest.cc:1399:    model.setText(base::ASCIIToUTF16("abcd"));
+controls/textfield/textfield_model_unittest.cc:1406:    model.setText(base::ASCIIToUTF16("abcd"));
+controls/textfield/textfield_model_unittest.cc:1413:    model.setText(base::ASCIIToUTF16("abcd"));
+controls/textfield/textfield_model_unittest.cc:1423:  composition.text = base::ASCIIToUTF16("abc");
+controls/textfield/textfield_model_unittest.cc:1427:  model.setText(base::ASCIIToUTF16("ABCDE"));
+controls/textfield/textfield_model_unittest.cc:1466:  model.setText(base::ASCIIToUTF16("ABCDE"));
+controls/textfield/textfield_model_unittest.cc:1470:  model.setText(base::ASCIIToUTF16("ABCDEabc"));
+controls/textfield/textfield_model_unittest.cc:1480:  model.setText(base::ASCIIToUTF16("ABCDE"));
+controls/textfield/textfield_model_unittest.cc:1484:  model.setText(base::ASCIIToUTF16("1234"));
+controls/textfield/textfield_unittest.cc:48:using base::ASCIIToUTF16;
+controls/textfield/textfield_unittest.cc:49:using base::UTF8ToUTF16;
+controls/textfield/textfield_unittest.cc:50:using base::WideToUTF16;
+controls/textfield/textfield_unittest.cc:56:const base::char16 kHebrewLetterSamekh = 0x05E1;
+controls/textfield/textfield_unittest.cc:72:    base::WeakPtr<TestTextfield> textfield(weak_ptr_factory_.getWeakPtr());
+controls/textfield/textfield_unittest.cc:98:  base::WeakPtrFactory<TestTextfield> weak_ptr_factory_;
+controls/textfield/textfield_unittest.cc:107:      : GestureEvent(x, y, 0, base::TimeDelta(), details) {}
+controls/textfield/textfield_unittest.cc:135:base::string16 GetClipboardText(ui::ClipboardType type) {
+controls/textfield/textfield_unittest.cc:136:  base::string16 text;
+controls/textfield/textfield_unittest.cc:164:    ViewsTestBase::tearDown();
+controls/textfield/textfield_unittest.cc:175:                       const base::string16& new_contents) override {
+controls/textfield/textfield_unittest.cc:254:  void sendKeyEvent(base::char16 ch) {
+controls/textfield/textfield_unittest.cc:362:  base::string16 last_contents_;
+controls/textfield/textfield_unittest.cc:396:  EXPECT_EQ(base::string16(), textfield_->getSelectedText());
+controls/textfield/textfield_unittest.cc:822:  base::string16 text_left = textfield_->getSelectedText();
+controls/textfield/textfield_unittest.cc:826:  base::string16 text_right = textfield_->getSelectedText();
+controls/textfield/textfield_unittest.cc:844:  base::string16 string(ASCIIToUTF16("string "));
+controls/textfield/textfield_unittest.cc:881:  bad_data.setFilename(base::FilePath(FILE_PATH_LITERAL("x")));
+controls/textfield/textfield_unittest.cc:884:  bad_data.setFileContents(base::FilePath(L"x"), "x");
+controls/textfield/textfield_unittest.cc:885:  bad_data.setHtml(base::string16(ASCIIToUTF16("x")), GURL("x.org"));
+controls/textfield/textfield_unittest.cc:886:  ui::OSExchangeData::DownloadFileInfo download(base::FilePath(), NULL);
+controls/textfield/textfield_unittest.cc:897:  base::string16 string;
+controls/textfield/textfield_unittest.cc:943:  base::string16 string;
+controls/textfield/textfield_unittest.cc:996:  base::string16 string;
+controls/textfield/textfield_unittest.cc:1157:  base::string16 substring;
+controls/textfield/textfield_unittest.cc:1395:  textfield_->setText(base::string16());
+controls/textfield/textfield_unittest.cc:1482:  base::i18n::SetICUDefaultLocale("he");
+controls/textfield/textfield_unittest.cc:1539:  base::i18n::SetICUDefaultLocale(locale);
+controls/textfield/textfield_unittest.cc:1633:  base::i18n::SetICUDefaultLocale("he");
+controls/textfield/textfield_unittest.cc:1666:  base::i18n::SetICUDefaultLocale(locale);
+controls/textfield/textfield_unittest.cc:1672:  base::string16 str;
+controls/textfield/textfield_unittest.cc:1697:  base::i18n::SetICUDefaultLocale("he");
+controls/textfield/textfield_unittest.cc:1701:  base::string16 str;
+controls/textfield/textfield_unittest.cc:1723:  base::i18n::SetICUDefaultLocale(locale);
+controls/textfield/textfield_unittest.cc:1761:  const base::char16 kUtf16Chars[] = {
+controls/textfield/textfield_views_model_unittest.cc:146:  on_windows_xp = base::win::GetVersion() < base::win::VERSION_VISTA;
+controls/textfield/textfield_views_model_unittest.cc:835:  model.getTextRange(const base::string16& range);
+controls/textfield/textfield_views_model_unittest.cc:862:  model.getTextRange(const base::string16& range);
+controls/textfield/textfield_views_model_unittest.cc:866:  model.getCompositionTextRange(const base::string16& range);
+controls/textfield/textfield_views_model_unittest.cc:1273:  resetModel(const base::string16& model);
+controls/textfield/textfield_views_model_unittest.cc:1496:  resetModel(const base::string16& model);
+controls/textfield/textfield_views_model_unittest.cc:1511:  resetModel(const base::string16& model);
+controls/textfield/textfield_model.h:57:  const base::string16& text() const { return render_text_->text(); }
+controls/textfield/textfield_model.h:63:  bool setText(const base::string16& new_text);
+controls/textfield/textfield_model.h:69:  void insertText(const base::string16& new_text) {
+controls/textfield/textfield_model.h:74:  void onCharInserted(base::char16 c);
+controls/textfield/textfield_model.h:78:  void replaceText(const base::string16& new_text) {
+controls/textfield/textfield_model.h:83:  void replaceChar(base::char16 c) {
+controls/textfield/textfield_model.h:84:    replaceTextInternal(base::string16(&c, 1), true);
+controls/textfield/textfield_model.h:89:  void append(const base::string16& new_text);
+controls/textfield/textfield_model.h:124:  base::string16 getSelectedText() const;
+controls/textfield/textfield_model.h:184:  void deleteSelectionAndInsertTextAt(const base::string16& new_text,
+controls/textfield/textfield_model.h:188:  base::string16 getTextFromRange(const gfx::Range& range) const;
+controls/textfield/textfield_model.h:229:  void insertTextInternal(const base::string16& new_text, bool mergeable);
+controls/textfield/textfield_model.h:233:  void replaceTextInternal(const base::string16& new_text, bool mergeable);
+controls/textfield/textfield_model.h:241:                                        const base::string16& new_text);
+controls/textfield/textfield_model.h:245:                               const base::string16& new_text,
+controls/textfield/textfield_model.h:247:  void executeAndRecordInsert(const base::string16& new_text, bool mergeable);
+controls/textfield/textfield_model.h:260:                  const base::string16& new_text,
+controls/slider.h:66:  void setAccessibleName(const base::string16& name);
+controls/slider.h:80:                      base::string16* tooltip) const override;
+controls/slider.h:82:  void appendTooltipText(base::string16 append_text) {  // added 160620
+controls/slider.h:116:  virtual base::string16 makeTooltipText() const;
+controls/slider.h:155:  base::string16 accessible_name_;
+controls/slider.h:184:  base::string16 append_text_;  // added 160620
+controls/prefix_delegate.h:26:  virtual base::string16 getTextForRow(int row) = 0;
+controls/progress_bar.h:38:  void setTooltipText(const base::string16& tooltip_text);
+controls/progress_bar.h:42:                      base::string16* tooltip) const override;
+controls/progress_bar.h:62:  base::string16 tooltip_text_;
+controls/single_split_view.cc:148:void SingleSplitView::setAccessibleName(const base::string16& name) {
+controls/single_split_view.cc:188:  if (is_horizontal_ && base::i18n::IsRTL())
+controls/single_split_view.cc:252:        p.x() - child_at(base::i18n::IsRTL() ? 1 : 0)->width();
+test/test_views_delegate.cc:65:base::TimeDelta TestViewsDelegate::getDefaultTextfieldObscuredRevealDuration() {
+test/test_views_delegate.cc:66:  return base::TimeDelta();
+test/views_test_base.h:46:  base::MessageLoopForUI* message_loop() { return &message_loop_; }
+test/views_test_base.h:53:  base::MessageLoopForUI message_loop_;
+test/views_test_base.cc:15:ViewsTestBase::ViewsTestBase()
+test/views_test_base.cc:18:ViewsTestBase::~ViewsTestBase() {
+test/views_test_base.cc:25:void ViewsTestBase::setUp() {
+test/views_test_base.cc:40:void ViewsTestBase::tearDown() {
+test/views_test_base.cc:54:void ViewsTestBase::runPendingMessages() {
+test/views_test_base.cc:55:  base::RunLoop run_loop;
+test/views_test_base.cc:59:Widget::InitParams ViewsTestBase::CreateParams(Widget::InitParams::Type type) {
+test/views_test_base.cc:65:gfx::NativeWindow ViewsTestBase::getContext() {
+cull_set.cc:15:CullSet::CullSet(scoped_ptr<base::hash_set<intptr_t> > cull_set)
+view_model.cc:12:ViewModelBase::~ViewModelBase() {
+view_model.cc:16:void ViewModelBase::remove(int index) {
+view_model.cc:24:void ViewModelBase::move(int index, int target_index) {
+view_model.cc:37:void ViewModelBase::moveViewOnly(int index, int target_index) {
+view_model.cc:53:void ViewModelBase::Clear() {
+view_model.cc:60:int ViewModelBase::getIndexOfView(const View* view) const {
+view_model.cc:68:ViewModelBase::ViewModelBase() {
+view_model.cc:71:void ViewModelBase::addUnsafe(View* view, int index) {
+focus/focus_manager_unittest.cc:502:    LabelButtonDtorTracked(const base::string16& text,
+focus/focus_manager_unittest.cc:527:    ViewsTestBase::setUp();
+focus/focus_manager_unittest.cc:543:    ViewsTestBase::tearDown();
+focus/focus_manager_unittest.cc:786:  base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
+focus/accelerator_handler.h:30:class VIEWS_EXPORT AcceleratorHandler : public base::MessageLoop::Dispatcher {
+focus/accelerator_handler.h:38:  virtual bool Dispatch(const base::NativeEvent& event) override;
+focus/focus_manager.cc:354:  base::AutoReset<bool> auto_changing_focus(&is_changing_focus_, true);
+focus/focus_manager_test.cc:34:  ViewsTestBase::setUp();
+focus/focus_manager_test.cc:57:  ViewsTestBase::tearDown();
+focus/focus_traversal_unittest.cc:27:using base::ASCIIToUTF16;
+focus/focus_traversal_unittest.cc:93:  base::string16 getItemAt(int index) override {
+focus/focus_traversal_unittest.cc:94:    return ASCIIToUTF16("Item ") + base::IntToString16(index);
+color_chooser/color_chooser_view.cc:35:base::string16 GetColorText(SkColor color) {
+color_chooser/color_chooser_view.cc:36:  return base::ASCIIToUTF16(base::StringPrintf("#%02x%02x%02x",
+color_chooser/color_chooser_view.cc:42:bool GetColorFromText(const base::string16& text, SkColor* result) {
+color_chooser/color_chooser_view.cc:47:      base::UTF16ToUTF8((text.size() == 6) ? text : text.substr(1));
+color_chooser/color_chooser_view.cc:49:  if (!base::HexStringToBytes(input, &hex))
+color_chooser/color_chooser_view.cc:453:                                       const base::string16& new_contents) {
+color_chooser/color_chooser_view.h:60:                       const base::string16& new_contents) override;
+mouse_watcher.cc:58:        base::MessageLoop::current()->postDelayedTask(
+mouse_watcher.cc:60:            base::Bind(&Observer::notifyListener,
+mouse_watcher.cc:63:                ? base::TimeDelta::FromMilliseconds(kNotifyListenerTimeMs)
+mouse_watcher.cc:83:  base::WeakPtrFactory<Observer> notify_listener_factory_;
+mouse_watcher.cc:98:      notify_on_exit_time_(base::TimeDelta::FromMilliseconds(
+accessibility/native_view_accessibility_win_unittest.cc:15:using base::win::ScopedBstr;
+accessibility/native_view_accessibility_win_unittest.cc:16:using base::win::ScopedComPtr;
+accessibility/native_view_accessibility_win_unittest.cc:17:using base::win::ScopedVariant;
+accessibility/native_view_accessibility_unittest.cc:32:    ViewsTestBase::setUp();
+accessibility/native_view_accessibility_unittest.cc:47:    ViewsTestBase::tearDown();
+cull_set.h:30:  CullSet(scoped_ptr<base::hash_set<intptr_t> > cull_set);
+cull_set.h:40:  scoped_ptr<base::hash_set<intptr_t> > cull_set_;
+button_drag_utils.cc:26:                        const base::string16& title,
+button_drag_utils.cc:37:                  const base::string16& title,
+button_drag_utils.cc:44:      NULL, title.empty() ? base::UTF8ToUTF16(url.spec()) : title);
+accessible_pane_view_unittest.cc:59:  base::string16 label;
+bubble/bubble_delegate.cc:123:  if (base::i18n::IsRTL())
+bubble/bubble_frame_view.cc:67:  title_ = new Label(base::string16(),
+bubble/bubble_frame_view.cc:88:  LabelButton* close = new LabelButton(listener, base::string16());
+bubble/bubble_frame_view.cc:169:                                          : base::string16());
+bubble/bubble_border_unittest.cc:297:    SCOPED_TRACE(base::StringPrintf("i=%d arrow=%d",
+bubble/bubble_border_unittest.cc:404:    SCOPED_TRACE(base::StringPrintf("i=%d arrow=%d alignment=%d",
+debug_utils.cc:21:  *out << base::UTF8ToWide(view->getClassName());
+debug_utils.cc:41:  *out << base::UTF8ToWide(view->getClassName());
+animation/bounds_animator_unittest.cc:100:  base::MessageLoopForUI message_loop_;
+animation/bounds_animator_unittest.cc:122:  base::MessageLoop::current()->Run();
+run_all_unittests.cc:16:class ViewTestSuite : public base::TestSuite {
+run_all_unittests.cc:18:  ViewTestSuite(int argc, char** argv) : base::TestSuite(argc, argv) {}
+run_all_unittests.cc:22:    base::TestSuite::Initialize();
+run_all_unittests.cc:26:    base::FilePath ui_test_pak_path;
+run_all_unittests.cc:33:    base::TestSuite::Shutdown();
+run_all_unittests.cc:43:  return base::LaunchUnitTests(
+run_all_unittests.cc:45:      base::Bind(&ViewTestSuite::Run, base::Unretained(&test_suite)));
+button_drag_utils.h:32:                                     const base::string16& title,
+button_drag_utils.h:40:                               const base::string16& title,
